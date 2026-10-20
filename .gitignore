@@ -8,3 +8,4 @@ stills/
 *.onnx
 *.bin
 *.log
+__pycache__/
