@@ -6,13 +6,39 @@ Last updated after video #5 (2026-10-21).
 
 ---
 
-## 0. First thing in a new session
+## 0. First thing in a new session: setup check (mandatory)
 
-1. **Attach and clone the repo** (it holds every project, this file, and the reusable code):
-   - Use the `add_repo` tool with owner `perezfiles01-droid` and repo `tagalog-shorts` (access `push`), then `git clone https://github.com/perezfiles01-droid/tagalog-shorts /home/user/tagalog-shorts`.
-2. **Install the Python tools** if missing: `pip install faster-whisper soundfile scipy numpy`.
-3. **Start the new video by copying the latest project** (currently `videos/tae`). See §6 step 7 for the exact copy command.
-4. Read §1 (style), §2 (flow), §3 (message formats) and §5 (settings) before replying to the user.
+**Before writing any script, run this check. If any item fails, STOP and tell the user exactly what's missing and how to fix it, using the messages below. Never "approximate" the style from memory or rebuild the kit from scratch to work around a missing setup.** The style, music and subtitles only match when the real code from the repo is copied.
+
+### 0.1 The repo: `perezfiles01-droid/tagalog-shorts` (the only correct one)
+- **Correct repo:** `perezfiles01-droid/tagalog-shorts`. It holds this playbook, every video project (`videos/…`) and all the reusable code.
+- **Wrong repo:** `perezfiles01-droid/PodC` (or `podc`) is the user's **Android TTS app**, unrelated to the videos. Never put video work in it, and never treat it as the source of the style. A session that starts in PodC must still attach `tagalog-shorts`.
+- **How to attach:** call `add_repo` (owner `perezfiles01-droid`, repo `tagalog-shorts`, access `push`), then clone it: `git clone https://github.com/perezfiles01-droid/tagalog-shorts /home/user/tagalog-shorts`. Confirm `HANDOFF.md` and `videos/tae/` exist.
+- **If `add_repo` or the clone fails, say exactly this and wait:**
+  > I can't reach your **tagalog-shorts** repo, which holds the code that keeps every video in the same style. Please do one of these, then tell me "done":
+  > 1. Start this session on the **perezfiles01-droid/tagalog-shorts** repo (not PodC, which is your Android app), or
+  > 2. Give the Claude GitHub App access to tagalog-shorts: https://github.com/apps/claude/installations/select_target (and reconnect GitHub at https://claude.ai/connect-github if needed).
+  >
+  > Without it, I'd have to rebuild the style from memory, and the video wouldn't match your previous ones.
+
+### 0.2 The latest project to copy from
+- It must exist: `videos/tae/video/src/{kit.tsx,props.tsx,batch.tsx,Video.tsx,Thumbnail.tsx,scenesB.tsx}`, `videos/tae/voice/{build_audio.py,sfx.py}`, `videos/tae/video/public/newsreader-italic.woff2`.
+- If it's missing or the repo looks different, say: *"The repo doesn't have the latest project (`videos/tae`) I need to copy the style from. Did a newer video get saved somewhere else, or should I use `<newest videos/… folder found>` instead?"* Wait for the answer.
+
+### 0.3 Tools in the environment
+Check each one quickly. If any fails and can't be installed, tell the user what's missing in one line, and stop until it's resolved:
+- `ffmpeg -version`, `node -v` (22 or newer), `npx remotion --version` (after `npm install` inside a copied `video/` folder).
+- The browser at `/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`. If the path differs, find it with `ls /opt/pw-browsers` and update `remotion.config.ts`. Tell the user only if no browser exists.
+- Python: `pip install faster-whisper soundfile scipy numpy` (plain PyPI; the PyTorch index is blocked).
+- A message for a blocked tool: *"This environment is missing <tool>, and I can't install it (<reason>). Please <fix, e.g. allow network access to X / use the cloud environment from last time>, then tell me 'done'."*
+
+### 0.4 What the user should paste or say to start
+If the user opens a session without context, tell them: *"For the same style and process, start a new session on the **tagalog-shorts** repo and say: 'Read HANDOFF.md and follow it exactly. Next video: <funny question>.'"*
+
+### 0.5 Once the check passes
+1. Tell the user in one line: *"Setup check passed: tagalog-shorts repo connected, latest project `videos/tae` found, tools ready."*
+2. Read §1 (style), §2 (flow), §3 (message formats), §5 (settings) and §11 (rules).
+3. Start the new video by copying the latest project (§6 step 2).
 
 ---
 
