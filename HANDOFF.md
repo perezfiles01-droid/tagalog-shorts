@@ -190,12 +190,28 @@ History: v1 (heavy ducking, ratio 6) was "can't hear the music". v2 (ratio 2.5) 
 
 ## 10. Videos made so far
 
-| # | Video (funny question) | Folder | Status |
-|---|---|---|---|
-| 1 | Isang Butil (rice journey; before the question format) | `videos/isang-butil` | 1080p delivered |
-| 2 | Ang Tupperware ni Nanay | `videos/tupperware-ni-nanay` | 1080p delivered |
-| 3 | Saan nga ba nagsimula ang salitang esmiringhoy? | `videos/esmiringhoy` | 1080p delivered |
-| 4 | Bakit nga ba mabaho ang utot? | `videos/utot` | 1080p delivered |
-| 5 | Nakakain ba ang tae? Bakit paborito ito ng mga langaw? | (next) | script approved, waiting for the recording |
+| # | Video (funny question) | Folder | Caption chosen | Status |
+|---|---|---|---|---|
+| 1 | Isang Butil (rice journey; before the question format) | `videos/isang-butil` | Bago umabot sa plato mo, malayo na ang nilakbay ng isang butil. 🌾 | 1080p delivered |
+| 2 | Ang Tupperware ni Nanay | `videos/tupperware-ni-nanay` | Ang Tupperware ni Nanay, laging may daan pauwi. 💙 | 1080p delivered |
+| 3 | Saan nga ba nagsimula ang salitang esmiringhoy? | `videos/esmiringhoy` | Esmiringhoy: alam mo na ba kung saan galing? 🐱💕 | 1080p delivered |
+| 4 | Bakit nga ba mabaho ang utot? | `videos/utot` | Mabaho ba ang utot mo? Hindi ka nag-iisa. 💨😅 | 1080p delivered |
+| 5 | Nakakain ba ang tae? Bakit paborito ito ng mga langaw? | `videos/tae` | Nakakain ba ang tae? Ang sagot ng siyensya… at ni Nanay. 😂🪰 | 1080p delivered |
 
-Start each new video by copying the latest project (`videos/utot`): it has the newest kit (Person hair options, overlays, `AutoBatch`, `Thumbnail`, procedural sound effects).
+**Start each new video by copying the latest project (`videos/tae`).** It has the newest kit: Person hair options, DOM overlays per scene (`O1`…`O8` next to `S1`…`S8` in `Video.tsx`), `AutoBatch`, `Thumbnail`, and the procedural sound-effect library in `voice/build_audio.py` + `voice/sfx.py`.
+
+**Reusable props by project:**
+- `tae`: `Fly` (wings, sunglasses, glowing feet, dance), `Swarm`, `Mound`, `Drop`, `Germ`, `Backyard`, the `Tag` big-number overlay.
+- `utot`: `Puff` (cartoon toot), `Dog`, `LivingRoom`, `Tunnel` (intestine), `Bacterium`, `Bubble` (incl. angry "stinky" face), the elevator set.
+- `esmiringhoy`: `Cat`, `Heart`, `PhoneLights` over the archipelago, `NightSea`, the word-split overlay, `Card` with a "?" stamp.
+- `tupperware-ni-nanay`: `Tupper`, `Dish`, `House`, `Barangay` (day/dusk/night), `StringLights`, `Kitchen`, `Cabinet`, `FeastTable`.
+- `isang-butil`: `TerraceHill`, `Field`, `Jeepney`, `Islands` (Philippine map), `Town`.
+
+**Audio helpers** (in `build_audio.py` / `sfx.py`): `pfft` toot, `meow`, `bark`, `knock`, `lid_click`/`clink`, `pop`, `whoosh`, `boing`, `ding`, `horn`, `thump`, `blip`, `buzz_track` (flies), `murmur` (crowd from the narrator's voice), `chirps` (birds), crickets, rain and thunder.
+
+**Lessons from these videos:**
+- The camera `far` must be bigger than the `Sky` dome radius (900), or the sky renders black. Use `far={2000}` for wide or pulled-back shots.
+- Keep React hooks (`useMemo`) above any early `return` in a scene that switches sets mid-scene.
+- Spoken wording that differs slightly from the script is fine. Update the subtitle text to match what was actually said, and merge any words whisper splits (`MERGES`).
+- Line timing: put the scene's key visual beat on the narration word itself. Compute local times as `video start + (word time − source line start) − scene start`.
+- Overlay positions (DOM) must be re-checked with a still after any camera change.
