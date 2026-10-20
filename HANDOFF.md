@@ -295,6 +295,26 @@ Add to `Root.tsx`: `ThumbA/B/C`, each `{scene, t}` for a strong still. Props: `t
 ### 5.7 Times to expect (no GPU here)
 Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 min (0.35 s/frame). Don't promise faster. Under 10 min needs the user's GPU PC or Remotion Lambda.
 
+### 5.8 Design specifics (keep identical)
+- **Code you copy as-is, never rewrite:** `Video.tsx` (subtitles, crossfades, vignette, fade from and to black, font loading), `kit.tsx`, `props.tsx`, `batch.tsx`, `Thumbnail.tsx`. Only `SCENES`, `TOTAL` and the export name change.
+- **Frame:** a radial vignette (transparent to 0.38 black at the edges) plus a bottom gradient for subtitle legibility. Fade in from black over the first 0.8 s, and out to black over the last 2 s.
+- **Characters:** `Person` toy figures. Use the same seeds for recurring roles in a video (e.g. Lolo 1001, Nanay `#c9784a` long hair, kid `scale 0.72` in `#d9b44a`). Kids are `scale={0.72}`; mouths open (`mouth`) when talking, laughing or gasping. Gestures are pose angles in radians (raise arm `armR: -2.3`, hold something `armL/armR: -1.15, elbow: -0.35`, sit `sit: true`).
+- **Lighting palettes:** day = sky `#8fc0e3`→`#f1eee2`, `hemisphereLight` about 1.25, warm directional `#fff1da` about 2.1. Indoor = dark background `#221d1a`/`#2a2420`, warm `pointLight #ffcf8f` intensity 8–18. Night = `#141a33` background, blue hemisphere about 0.8–0.9, moon sphere `#fff6d8`. Dusk = `Barangay dusk={1}`.
+- **Camera:** fov 40–46 for people, 55–60 inside tunnels, 30–36 for dramatic close-ups. Every scene has slow motion through `mix(a, b, smooth(t, t0, t1))`; never a static camera. Montages stop at each vignette (hold, quick move, hold).
+- **Framing for 9:16:** keep the subject in the middle 60% of the width. Faces and gags go above y ≈ 1350 px (the subtitles sit around 1380–1500 px). Overlays (big numbers, ✕, labels) go near the top, around 300–330 px padding.
+- **Overlay text style:** Newsreader Italic 700, 130–200px for numbers, a 56–64px sub line, white or gold `#e8b54a` (sulfur or stinky things `#d6e34a`, water `#8fd0ff`, germs `#9bd86a`), a strong shadow, and a scale-in pop over 0.3–0.6 s. Card overlays are off-white rounded cards with a red `#d33a2c` "?" stamp.
+- **Gags:** each scene has one clear visual joke (freeze then blame the dog, Nanay's tsinelas, sunglasses flies, eyes popping over a newspaper, the elevator head-turn). Silent scene 4 is always a playful mini-sequence (cats on a roof, the gas balloon drumroll, a slow-motion fly documentary).
+
+### 5.9 Musical scoring specifics (keep identical)
+`music()` in the latest `build_audio.py` is copied unchanged; only the silent-scene window is set:
+- **Tempo** 104 bpm (`beat = 60/104`). **Progression** C – G – Am – F (`[[48,52,55],[43,47,50],[45,48,52],[41,45,48]]`), 8 beats per chord.
+- **Bass:** pizzicato on beats 1 and 3 (`tone(root−12, 0.5 s, decay 5)`, gain 0.16). **Off-beats:** chord plucks an octave up (gain 0.035).
+- **Melody:** a marimba-like line from `[72,74,76,79,76,74,72,67]`, about 70% of beats (gain 0.05, random pan).
+- **Silent scene:** switches to the minor progression (Am – F – E – Am) with creeping low notes every 4 beats, and no melody or off-beats.
+- **Pad:** a soft C-major pad (0.012) under scenes 1–3, swelling in the last scene (`np.clip((t − last scene start)/5, 0, 1)`).
+- **Fades:** in over 1.5 s, out over the last 4 s. Written at ×1.6, giving about −25 LUFS before the mix.
+- **Sound-effect rule:** at least one effect per gag, timed to the frame of the visual (a stamp thump, a pop per appearing item, a whoosh per camera dive, `pfft` for toots, a `ding` for elevators and reveals, `meow`/`bark` for animals, a `murmur` crowd for groups, birds by day, crickets at night). Keep each effect's gain between 0.04 and 0.45, so none beats the voice.
+
 ---
 
 ## 6. Build procedure for a new video (do every step)
