@@ -10,3 +10,4 @@ stills/
 *.log
 __pycache__/
 bench/
+thumbs/
