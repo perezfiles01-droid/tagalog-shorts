@@ -5,7 +5,8 @@ import {getInputProps} from 'remotion';
 import {AutoBatch} from './batch';
 
 // --props='{"batch":false}' renders without batching (for A/B checks)
-const BATCH = (getInputProps() as {batch?: boolean}).batch !== false;
+const IP = getInputProps() as {batch?: boolean; noAudio?: boolean; noSubs?: boolean; noScene?: boolean};
+const BATCH = IP.batch !== false;
 import {H, W} from './kit';
 import {S1, S2, S3, S4, S5, S6, S7, S8} from './scenes';
 import timeline from './timeline.json';
@@ -41,7 +42,7 @@ const SceneLayer: React.FC<{C: React.FC<{t: number}>; dur: number; first: boolea
 	return (
 		<AbsoluteFill style={{opacity: Math.min(fadeIn, fadeOut)}}>
 			<ThreeCanvas width={W} height={H} gl={{antialias: true}} dpr={1}>
-				<C t={t} />
+				{IP.noScene ? null : <C t={t} />}
 				<AutoBatch enabled={BATCH} />
 			</ThreeCanvas>
 		</AbsoluteFill>
@@ -126,9 +127,9 @@ export const TupperwareNiNanay: React.FC = () => {
 			{/* vignette */}
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.38) 100%)'}} />
 			<AbsoluteFill style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.28) 80%, rgba(0,0,0,0.1) 100%)'}} />
-			<Subtitles />
+			{IP.noSubs ? null : <Subtitles />}
 			<AbsoluteFill style={{backgroundColor: '#000', opacity: black}} />
-			<Audio src={staticFile('mix.wav')} />
+			{IP.noAudio ? null : <Audio src={staticFile('mix.wav')} />}
 		</AbsoluteFill>
 	);
 };
