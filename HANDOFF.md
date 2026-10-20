@@ -20,7 +20,7 @@ Vertical **9:16 (1080×1920, 30fps)** animated mini-documentaries, **1–2 minut
 | Subtitles | **Yes.** Italic serif (Newsreader Italic, weight 500), white, about 70px, max 2 rows, lower third (bottom padding 470px). Words brighten as they're spoken. **Key words turn gold `#e8b54a`.** Heavy soft text shadow. |
 | Words vs animation | **Less wording, more animation.** About 7 narrated sentences per 95 s, plus at least one silent "breathing" scene. |
 | Narration style | Full, flowing documentary sentences (Discovery-channel tone), calm, not short fragments. |
-| **Topic format (every video)** | **A funny question** as the title and the opening line, e.g. *"Mabaho ba ang utot mo? Nakaamoy ka na ba ng mabangong utot?"*, *"Nakakain ba ang tae?"*, *"Saan nga ba nagsimula ang salitang esmiringhoy?"*. Open with the joke in the first 3 s, answer it with real facts, and end on a light but meaningful (or useful) note with one last punchline. |
+| **Opening rule (every video)** | **The script's very first words are a funny question asked straight to the viewer.** No set-up clause before it (not "Kung…", not "Isang gabi…"). The title is also a funny question. Examples: *"Mabaho ba ang utot mo? Nakaamoy ka na ba ng mabangong utot?"*, *"Nakakain ba ang tae?"*. Open with the joke in the first 3 s, answer it with real facts, and end on a light but meaningful (or useful) note with one last punchline. |
 | Tone | Funny yet meaningful and PG: cartoon gags only, nothing gross or explicit, no real private people. Health or safety topics must state the safe answer clearly. |
 | Ending | Pull back or reveal, then fade to black. |
 
@@ -28,7 +28,7 @@ Vertical **9:16 (1080×1920, 30fps)** animated mini-documentaries, **1–2 minut
 
 ## 2. The approved workflow (follow in this order)
 
-1. **Topic and script.** The topic is a **funny question** (the user usually supplies it). Research the facts first and cite sources when anything is uncertain or trending. Then write a scene-by-scene script (time / animation / narration) whose **line 1 asks the funny question**. Claude provides sample text; **the user edits it.** Target about 95 s: 7–8 scenes of 8–14 s.
+1. **Topic and script.** The topic is a **funny question** (the user usually supplies it). Research the facts first and cite sources when anything is uncertain or trending. Then write a scene-by-scene script (time / animation / narration) whose **line 1 starts with the funny question** (first word to last, it's a question). Claude provides sample text; **the user edits it.** Target about 95 s: 7–8 scenes of 8–14 s.
 2. **User records the narration** on their phone. Give them the clean numbered lines to read, plus recording tips: quiet soft room, 20–30 cm from the phone, original voice-recorder file (not a Messenger voice note), 5 s of silence at the start, 2–3 s pauses between lines.
 3. **Check the upload.** If only text arrives, ask again for the audio file. Compare what they say against the script and flag differences (in "Isang Butil" the transcript showed "4 na taon", but the audio actually said "apat na buwan").
 4. **Enhance the voice** with the ffmpeg chain in §4 and send it back as an MP3.
