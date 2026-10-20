@@ -20,13 +20,15 @@ Vertical **9:16 (1080×1920, 30fps)** animated mini-documentaries, **1–2 minut
 | Subtitles | **Yes.** Italic serif (Newsreader Italic, weight 500), white, about 70px, max 2 rows, lower third (bottom padding 470px). Words brighten as they're spoken. **Key words turn gold `#e8b54a`.** Heavy soft text shadow. |
 | Words vs animation | **Less wording, more animation.** About 7 narrated sentences per 95 s, plus at least one silent "breathing" scene. |
 | Narration style | Full, flowing documentary sentences (Discovery-channel tone), calm, not short fragments. |
+| **Topic format (every video)** | **A funny question** as the title and the opening line, e.g. *"Mabaho ba ang utot mo? Nakaamoy ka na ba ng mabangong utot?"*, *"Nakakain ba ang tae?"*, *"Saan nga ba nagsimula ang salitang esmiringhoy?"*. Open with the joke in the first 3 s, answer it with real facts, and end on a light but meaningful (or useful) note with one last punchline. |
+| Tone | Funny yet meaningful and PG: cartoon gags only, nothing gross or explicit, no real private people. Health or safety topics must state the safe answer clearly. |
 | Ending | Pull back or reveal, then fade to black. |
 
 ---
 
 ## 2. The approved workflow (follow in this order)
 
-1. **Topic and script.** Claude proposes an original topic and a scene-by-scene script as a table (time / animation / narration). Claude provides sample text; **the user edits it.** Target about 95 s: 7–8 scenes of 8–14 s.
+1. **Topic and script.** The topic is a **funny question** (the user usually supplies it). Research the facts first and cite sources when anything is uncertain or trending. Then write a scene-by-scene script (time / animation / narration) whose **line 1 asks the funny question**. Claude provides sample text; **the user edits it.** Target about 95 s: 7–8 scenes of 8–14 s.
 2. **User records the narration** on their phone. Give them the clean numbered lines to read, plus recording tips: quiet soft room, 20–30 cm from the phone, original voice-recorder file (not a Messenger voice note), 5 s of silence at the start, 2–3 s pauses between lines.
 3. **Check the upload.** If only text arrives, ask again for the audio file. Compare what they say against the script and flag differences (in "Isang Butil" the transcript showed "4 na taon", but the audio actually said "apat na buwan").
 4. **Enhance the voice** with the ffmpeg chain in §4 and send it back as an MP3.
@@ -35,7 +37,7 @@ Vertical **9:16 (1080×1920, 30fps)** animated mini-documentaries, **1–2 minut
 7. **Build the scenes** in Remotion with `@remotion/three` (§3). Check with **still frames** first (`npx remotion still ... --frame=N`), tiled into a contact sheet, then fix framing.
 8. **Low-quality preview first:** `Preview` composition (15fps) with `--scale=0.5`, about 10 min. Send it and collect feedback.
 9. **Audio-only changes** do not need a re-render: rebuild `mix.wav`, then remux onto the existing preview with `ffmpeg -c:v copy`.
-10. **Final render: only when the user says "render".** Render **native 1440p** (1440×2560, 30fps, CRF 18) with `--scale=1.3333`. Never upscale a 1080p render; the user wants no quality compromise. **Target: under 10 minutes.** See §8 for the speed status.
+10. **Final render: only when the user says "render".** Render **1080p** (1080×1920, 30fps, CRF 18, AAC 192k). The user changed this from 1440p. About 18–20 min here; see §8.
 11. **Thumbnail:** offer 3 vertical options (1080×1920) and let the user pick one. Each is a scene still plus the title (§9).
 12. **Caption:** one short Tagalog phrase, a blank line, then hashtags. Offer 3 phrase options and let the user pick (§9).
 13. **Deliver the upload package** (§9): MP4, thumbnail PNG, caption text, title. **The user uploads manually** to the Facebook Page as a Reel. Remind them to download everything, because the cloud container is temporary.
@@ -128,6 +130,7 @@ History: v1 (heavy ducking, ratio 6) was "can't hear the music". v2 (ratio 2.5) 
 - `pip install torch` from the PyTorch index is blocked, but plain `pip install torch` (PyPI) works.
 - faster-whisper: pass a **numpy array** (16 kHz mono via soundfile), not a file path. The file decoder fails with the installed `av` version.
 - Don't use `pkill -f "remotion render"` inside a command that itself contains that string; it kills its own shell. Find the PID first.
+- **Background commands here drop a leading `cd`.** Launch background renders with `env -C <project dir> sh -c '...'`, and confirm `Rendered N/...` appears in the log before telling the user it's running.
 - **The container is temporary.** Everything in the scratchpad disappears when the session ends. Send the final MP4 to the user and keep this handoff and the project source somewhere permanent.
 
 ---
@@ -142,24 +145,20 @@ History: v1 (heavy ducking, ratio 6) was "can't hear the music". v2 (ratio 2.5) 
 - [ ] Reuse `kit.tsx` and build the new scenes. Check still frames on a contact sheet.
 - [ ] Generate music and ambience. Mix at v3 levels.
 - [ ] Send the low-quality preview, then iterate (audio-only changes are just a remux).
-- [ ] When the user says "render": native 1440p final render.
+- [ ] When the user says "render": 1080p final render.
 - [ ] 3 thumbnail options, then the user picks one.
 - [ ] 3 caption phrases + hashtags, then the user picks one.
 - [ ] Send the upload package (MP4 + thumbnail + caption + title). The user uploads manually.
 
 ---
 
-## 8. Render speed (open work)
+## 8. Render speed
 
-- The user's target is a **final native-1440p render in under 10 minutes**, with **no quality loss**.
-- **Measured so far** (no optimizations yet): 1080p30 took about 33 min, so 1440p would take an estimated 40–50 min.
-- **Planned optimizations** (do these first in the next session, before rendering):
-  1. Instance the `Person` parts across crowds (biggest win; the market scene alone is about 1,400 draw calls).
-  2. Merge static scenery into a few meshes.
-  3. JPEG frame capture and concurrency tuning.
-  4. Profile per scene and fix the slowest first.
-- **Quality rule:** render the same frames before and after each change, compare them with SSIM, and drop any change that alters the picture.
-- **Fallbacks if 10 min can't be reached here:** render on the user's own GPU PC (3–8 min) or Remotion Lambda (1–3 min, needs AWS).
+- **Done:** `src/batch.tsx` (`AutoBatch`) draws identical opaque flat-shaded meshes as instanced batches. SSIM vs unbatched is 0.99995 (no visible change), and it's about 23% faster. It's on in every project's `Video.tsx`.
+- **Measured:** 1080p30 takes about 0.35 s per frame at concurrency 4, so 100 s takes about **18–20 min**. Even a near-empty scene costs that much: it's software per-pixel shading (no GPU), not scene complexity. `--scale=0.5` saves little.
+- **Previews:** use the 15fps `Preview` composition (about 8–10 min). For later rounds, re-render only the changed scenes.
+- **Under 10 min needs a GPU:** the user's own PC (2–4 min) or Remotion Lambda (needs AWS).
+- **Quality rule:** compare frames before and after any speed change with SSIM, and drop any change that alters the picture.
 
 ---
 
@@ -186,3 +185,17 @@ History: v1 (heavy ducking, ratio 6) was "can't hear the music". v2 (ratio 2.5) 
 **Channel branding** (`src/Brand.tsx`): storyteller mascot (cream barong-style shirt, no hat) as the profile picture, the `ChannelCover` lineup (1640×624) as the cover, and the `TikTokProfile` mascot crop. Reuse the mascot for consistency.
 
 **First post:** "Isang Butil", caption *"Bago umabot sa plato mo, malayo na ang nilakbay ng isang butil. 🌾"*, thumbnail option B (terraces). Delivered at 1080p; the 1440p re-render is pending the speed work.
+
+---
+
+## 10. Videos made so far
+
+| # | Video (funny question) | Folder | Status |
+|---|---|---|---|
+| 1 | Isang Butil (rice journey; before the question format) | `videos/isang-butil` | 1080p delivered |
+| 2 | Ang Tupperware ni Nanay | `videos/tupperware-ni-nanay` | 1080p delivered |
+| 3 | Saan nga ba nagsimula ang salitang esmiringhoy? | `videos/esmiringhoy` | 1080p delivered |
+| 4 | Bakit nga ba mabaho ang utot? | `videos/utot` | 1080p delivered |
+| 5 | Nakakain ba ang tae? Bakit paborito ito ng mga langaw? | (next) | script approved, waiting for the recording |
+
+Start each new video by copying the latest project (`videos/utot`): it has the newest kit (Person hair options, overlays, `AutoBatch`, `Thumbnail`, procedural sound effects).
