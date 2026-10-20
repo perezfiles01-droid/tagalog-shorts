@@ -35,8 +35,10 @@ Vertical **9:16 (1080×1920, 30fps)** animated mini-documentaries, **1–2 minut
 7. **Build the scenes** in Remotion with `@remotion/three` (§3). Check with **still frames** first (`npx remotion still ... --frame=N`), tiled into a contact sheet, then fix framing.
 8. **Low-quality preview first:** `Preview` composition (15fps) with `--scale=0.5`, about 10 min. Send it and collect feedback.
 9. **Audio-only changes** do not need a re-render: rebuild `mix.wav`, then remux onto the existing preview with `ffmpeg -c:v copy`.
-10. **Final render** of `IsangButil`-style composition at 30fps, CRF 18, about 30–35 min. Send the MP4.
-11. Tell the user to **download the final MP4**, because the cloud container is temporary.
+10. **Final render: only when the user says "render".** Render **native 1440p** (1440×2560, 30fps, CRF 18) with `--scale=1.3333`. Never upscale a 1080p render; the user wants no quality compromise. **Target: under 10 minutes.** See §8 for the speed status.
+11. **Thumbnail:** offer 3 vertical options (1080×1920) and let the user pick one. Each is a scene still plus the title (§9).
+12. **Caption:** one short Tagalog phrase, a blank line, then hashtags. Offer 3 phrase options and let the user pick (§9).
+13. **Deliver the upload package** (§9): MP4, thumbnail PNG, caption text, title. **The user uploads manually** to the Facebook Page as a Reel. Remind them to download everything, because the cloud container is temporary.
 
 ---
 
@@ -140,4 +142,47 @@ History: v1 (heavy ducking, ratio 6) was "can't hear the music". v2 (ratio 2.5) 
 - [ ] Reuse `kit.tsx` and build the new scenes. Check still frames on a contact sheet.
 - [ ] Generate music and ambience. Mix at v3 levels.
 - [ ] Send the low-quality preview, then iterate (audio-only changes are just a remux).
-- [ ] Final render, then send the MP4 and remind the user to download it.
+- [ ] When the user says "render": native 1440p final render.
+- [ ] 3 thumbnail options, then the user picks one.
+- [ ] 3 caption phrases + hashtags, then the user picks one.
+- [ ] Send the upload package (MP4 + thumbnail + caption + title). The user uploads manually.
+
+---
+
+## 8. Render speed (open work)
+
+- The user's target is a **final native-1440p render in under 10 minutes**, with **no quality loss**.
+- **Measured so far** (no optimizations yet): 1080p30 took about 33 min, so 1440p would take an estimated 40–50 min.
+- **Planned optimizations** (do these first in the next session, before rendering):
+  1. Instance the `Person` parts across crowds (biggest win; the market scene alone is about 1,400 draw calls).
+  2. Merge static scenery into a few meshes.
+  3. JPEG frame capture and concurrency tuning.
+  4. Profile per scene and fix the slowest first.
+- **Quality rule:** render the same frames before and after each change, compare them with SSIM, and drop any change that alters the picture.
+- **Fallbacks if 10 min can't be reached here:** render on the user's own GPU PC (3–8 min) or Remotion Lambda (1–3 min, needs AWS).
+
+---
+
+## 9. Publishing (manual upload by the user)
+
+**Channel**
+- Facebook Page: **Kwentong Kayumanggi** (category: Creator), Page ID `1442014212320460`, connected through Composio.
+- TikTok `@kwentongkayumanggi` exists, but the user said **no TikTok for now**.
+- YouTube "Papel Tales" is connected through Composio, but it's a different (paper-cut) channel. **Don't use it.**
+- Bio: *Mga kuwento ng kasaysayan, kultura at buhay ng mga Pilipino.*
+
+**Upload package to deliver for every video**
+
+| Item | Spec |
+|---|---|
+| Video | Native 1440p MP4 (1440×2560, H.264 CRF 18, AAC 192k). Send it as a file card. |
+| Thumbnail | 1080×1920 PNG: a scene still with the title in Newsreader Italic 600, about 175px, white with the **key word in gold `#e8b54a`**; a subtitle line about 56px under it; a top/bottom dark gradient. `src/Thumbnail.tsx`, compositions `ThumbA/B/C`. |
+| Caption | **One short phrase + emoji, a blank line, then about 11 hashtags.** Always include `#KwentongKayumanggi`, `#Pilipinas`, `#KulturangPilipino`, `#3DAnimation`, `#Reels`, plus topic tags. |
+| Title | `<Title>: <short subtitle>` e.g. `Isang Butil: Ang Paglalakbay ng Bigas` |
+| How to post | FB app → switch to the Page → ＋ Create → Reel → select the video → Edit cover → upload the thumbnail → paste the caption → Share. The app accepts Reels over 90 s. |
+
+**Why posting is manual:** this environment's network blocks Facebook's upload host (`graph-video.facebook.com`), and Composio needs a public file URL. The Graph Reels API is also limited to 90 s. If the user ever wants auto-posting, ask before using any temporary public file host.
+
+**Channel branding** (`src/Brand.tsx`): storyteller mascot (cream barong-style shirt, no hat) as the profile picture, the `ChannelCover` lineup (1640×624) as the cover, and the `TikTokProfile` mascot crop. Reuse the mascot for consistency.
+
+**First post:** "Isang Butil", caption *"Bago umabot sa plato mo, malayo na ang nilakbay ng isang butil. 🌾"*, thumbnail option B (terraces). Delivered at 1080p; the 1440p re-render is pending the speed work.
