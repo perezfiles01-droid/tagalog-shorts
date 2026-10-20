@@ -392,3 +392,66 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 
 ### Voice options already tried (don't re-try)
 Kokoro TTS: accented, rejected. Meta MMS-TTS Tagalog: flat. ElevenLabs Filipino voices: need a paid plan. Edge TTS: blocked. **The user's own recording, enhanced, is the standard.**
+
+---
+
+## 11. Extra rules, fixes and checklists
+
+### 11.1 If something is missing in a new session
+- **The repo can't be attached or cloned:** tell the user the `tagalog-shorts` repo isn't reachable, and ask them to check that the Claude GitHub App has access to it. Don't rebuild the kit from memory unless the user agrees.
+- **Tools:** `ffmpeg`, Node 22 and `/opt/pw-browsers/chromium_headless_shell-1194` were pre-installed here. The first faster-whisper run downloads the `medium` model (about 1.5 GB, a few minutes). Mention this if it's slow.
+- **Paths may differ:** if `/home/user` doesn't exist, clone wherever the working directory is and adjust `P=`, but keep the same folder structure.
+
+### 11.2 When the user asks for topic ideas
+Give **5 ideas**, each in this exact shape, then recommend one:
+```
+### 1. "<Funny question title>" ⭐ recommended
+**Funny:** <the gag setup in one or two sentences>
+**Meaningful twist:** <the ending lesson>
+**Why it could trend:** <relatable, taggable, comment-bait reason>
+```
+Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by-scene script for you to edit."*
+
+### 11.3 Research and fact rules
+- Search before writing (WebSearch "standard"; "extended" for trending or slang). Use only facts found in reliable sources. For trending items, cite the sources as markdown links in the reply.
+- Word numbers safely in the narration: "mahigit sampung beses", "halos tatlong-kapat", "wala pang isang porsiyento". Never give exact figures you couldn't verify.
+- If the origin or answer is uncertain, say so in the script (e.g. "wala pa itong opisyal na kahulugan").
+- **Sensitive topics** (sexual slang, real viral people, health risks): explain the concern first, propose a PG angle (hint, don't show), and only write after the user agrees. Example: Esmiringhoy used cats on a roof and a blushing couple, and never the real couple from the viral interview.
+
+### 11.4 Recording problems
+- Small wording changes: keep them and match the subtitles (§3.4).
+- **A spoken mistake that changes a fact** (e.g. "4 na taon" instead of "apat na buwan"): tell the user, explain why it matters, and ask them to re-record just that line. Splice the new take in at that line's source time.
+- Too quiet, clipped or noisy: enhance anyway, but warn them, and send the recording tips again.
+- If total speech is over about 100 s, the video can run up to about 110 s. If it would pass 120 s, ask which line to shorten.
+
+### 11.5 Small fixes without a full re-render
+- **Sound only** (volume, an effect, the music): edit `build_audio.py`, re-run it, then swap the new audio onto the existing video:
+  `ffmpeg -y -i out/<slug>-preview.mp4 -i public/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -shortest out/<slug>-preview-v2.mp4`
+- **One scene changed:** check it with stills, or render just that range: `npx remotion render src/index.ts Preview out/check.mp4 --scale=0.5 --frames=<start*15>-<end*15>`. Then re-render the full preview once all fixes are in.
+- **Subtitle text fix:** edit the `LINES` text in `build_audio.py` and re-run (this rewrites `timeline.json`). The token count must still match.
+
+### 11.6 Pre-preview checklist (every item, every time)
+- [ ] `npx tsc -p .` is clean.
+- [ ] Mix about −14 LUFS, music about −25, ambience −27 to −32 (§5.4).
+- [ ] Stills of all 8 scenes viewed on contact sheets: subjects in frame, nothing important under the subtitles, no black sky, overlays not colliding with the subtitles.
+- [ ] Each overlay or gag is timed to its spoken word (§4).
+- [ ] Code committed and pushed.
+
+### 11.7 Naming and replies
+- Folder `videos/<slug>` (short, lowercase, e.g. `tae`, `utot`). Files `<slug>-preview.mp4`, `<slug>-1080p.mp4`, `thumbs/ThumbA.png`. The composition name is PascalCase (`Tae`, `Utot`).
+- When the user picks a thumbnail: *"Thumbnail <X> it is. You have everything to post: the MP4, thumbnail <X>, the caption and the title above."* Then update §10 and push.
+- The user writes in English or Taglish. Reply in English. Tagalog content is always shown with an English translation in italics.
+- Keep replies short and scannable (bold labels, short lists), and never claim progress you haven't checked.
+
+### 11.8 Worked example: "Nakakain ba ang tae?" (video #5)
+| Scene | Start | Dur | Line (video start) | What happens | Key beat |
+|---|---|---|---|---|---|
+| S1 | 0 | 12.5 | L1 @0.6 | backyard, poop swirl, flies arriving (some with sunglasses), curious kid | — |
+| S2 | 12.5 | 12.7 | L2 @13.0 | kid leans in, Nanay runs over with a tsinelas | red ✕ on "hindi" (local 2.0) |
+| S3 | 25.2 | 14 | L3 @25.6 | the mound's "menu": water drops, food bits, germs | "75% tubig" 2.6 s, "BUFFET!" 12.8 s |
+| S4 | 39.2 | 8 | (silent) | slow-motion fly lands, feet sparkle, happy dance, eggs | sneaky minor music |
+| S5 | 47.2 | 15.6 | L4 @47.6 | macro fly: glowing feet, saliva melts the food, sip | feet on "paa" (5.0), drip on "laway" (10.7) |
+| S6 | 62.8 | 13.7 | L5 @63.2 | fly flies to the pancit with a germ trail, family gasps | lands on "dumapo" (4.9), "100+" on "isandaang" (9.1) |
+| S7 | 76.5 | 12.9 | L6 @76.9 | cover food, wash hands, close the toilet lid | each action on its word |
+| S8 | 89.4 | 16.6 | L7 @89.8 | family eats at sunset, kid winks, sad flies, camera rises | fade to black |
+TOTAL 106 s. Final render about 20 min. The user picked caption A.
