@@ -2,7 +2,7 @@
 
 **Read this whole file before doing anything.** It is the complete, exact recipe for how every video on this channel is made, and how Claude talks to the user at each step. A new session must reproduce the same style, flow, settings and message formats **exactly**. Don't improvise a new process, don't skip steps, and don't change any approved setting unless the user asks.
 
-Last updated after video #9 (2026-10-21).
+Last updated after video #11 (2026-10-21).
 
 ---
 
@@ -386,10 +386,11 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 - `esmiringhoy`: `Cat`, `Heart`, `PhoneLights` over the archipelago, `NightSea`, the word-split overlay, `Card` with a red "?" stamp, the radio booth.
 - `tupperware-ni-nanay`: `Tupper`, `Lid`, `Dish`, `House`, `Barangay` (day/dusk/night, `extraRows`, `lights`), `StringLights`, `Kitchen`, `Cabinet`, `FeastTable`, `Actor`/`CAST`.
 - `jeep`: `Jeep` (open-interior jeepney: benches, riders by seat index, stretchable cabin `len`, PhD driver with mortarboard and glasses, diploma on the mirror, glowing roof sign), `fullRiders(gap)`, `Mouse`, `Street` (two rows of houses along z), `Rocket`, `Einstein`, space-time `Tunnel`, the red ✕ `Cross` overlay.
+- `nanay`: `Phone` (glowing screen, `red` alert mode), `CCTV` (floating camera, blinking light), `Fish`, `Palengke` (fish stalls), `Room`, `Bed`, `Snacks`, `Sweat`, the kid lying in bed holding a phone up; DOM overlays: `Bubble` (Messenger-style chat bubble, `me` for the kid's blue reply), the 5…1 countdown + red flash, `×N` clean-dish counter, the incoming-call card, the "EMPLOYEE ID / Sweldo: ₱0.00" card, the "Mga Marites ng Purok 3" group-chat card.
 - `isang-butil`: `TerraceHill`, `Field` (instanced rice), `Rain`, `Jeepney`, `Stall`, `Islands`, `Town`, `Brand.tsx`.
 - `kit.tsx`: `Person` (pose fields `armL armR spreadL spreadR elbow leg bend sit headTurn bob`; props `seed shirt pants hat mouth longHair hairColor scale children`), `walk(t, speed, phase)`, `Cam`, `Sky`, `mat`, `Tree`, `Cloud`, `Mountain`.
 
-**Sound helpers** (`build_audio.py` + `sfx.py`): `pfft` (toot), `meow`, `bark`, `knock`, `clink`, `pop`, `whoosh`, `boing`, `ding`, `blip`, `thump`, `horn`, `tone`, `buzz_track` (flies), `murmur` (crowd from the narrator's voice), `chirps` (birds), crickets, rain, thunder, wind.
+**Sound helpers** (`build_audio.py` + `sfx.py`): `pfft` (toot), `meow`, `bark`, `knock`, `clink`, `pop`, `whoosh`, `boing`, `ding`, `blip`, `thump`, `horn`, `tone`, `buzz_track` (flies), `murmur` (crowd from the narrator's voice), `chirps` (birds), crickets, rain, thunder, wind. In `nanay/voice/build_audio.py`: `ping` (message received), `ring` (phone call).
 
 ---
 
@@ -418,6 +419,8 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 7 | Makakaligtas Ka Ba sa Zombie Outbreak? | `videos/zombie` | Makakaligtas ka ba sa zombie outbreak? Mas nakakatakot pala ang ibang outbreak. 🧟‍♂️🧾 | 1080p delivered (thumbnail: user's choice) |
 | 8 | Ano ang Mangyayari Kung Sumabog ang Buwan? | `videos/buwan` | Walang forever… pero sana ang buwan, meron. 🌕🥲 | 1080p delivered, 111 s (science timeline with time chips; thumbnail: user's choice) |
 | 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p delivered, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
+| 10 | Nalulungkot Ba ang Kanin? | `videos/kanin` | Kahit gaano kasarap ang ulam, kanin pa rin ang tunay na bida. 🍚💛 | 1080p rendering, 95 s (user's own script read word for word: 8 narrated lines, silent scene after line 4; thumbnail: user's choice) |
+| 11 | May Sixth Sense Ba Talaga ang mga Nanay? | `videos/nanay` | May sixth sense ba talaga si Nanay… o may group chat lang sila ng mga kapitbahay? 👀📱 | 1080p rendering, 104 s (script written by the user, pure comedy with no researched facts; chat-bubble overlays; thumbnail: user's choice) |
 
 **Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `jeep/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`, `engine`, `squeak`, `cluck`).
 
@@ -449,6 +452,11 @@ Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by
 - If the origin or answer is uncertain, say so in the script (e.g. "wala pa itong opisyal na kahulugan").
 - **Sensitive topics** (sexual slang, real viral people, health risks): explain the concern first, propose a PG angle (hint, don't show), and only write after the user agrees. Example: Esmiringhoy used cats on a roof and a blushing couple, and never the real couple from the viral interview.
 
+### 11.3a When the user sends their own script
+- **Follow it word for word** when they ask ("please follow the script here"). Don't merge, reword or add facts; only send the clean lines (§3.3) with an English note on anything changed (e.g. finishing a line cut off in their message from an earlier copy).
+- If it has 8 lines instead of 7, put the **silent scene after the line that sets up the twist** (in `kanin`, after line 4, the rice's rebellion), giving 9 scenes. Keep the total under 2 min.
+- Example: `videos/kanin` (9 scenes, `S5` silent, `O3` "0 papuri", `O6` red ✕, `O7` "?!"). New props there: `RiceBowl` and `RiceBall` (a rice character with a `Face`: moods happy/sad/angry/calm, tear, wink, glow, bandana, bindle), `AdoboPot`, `Lechon`, `Spaghetti`, `RiceCooker`, `Hearts`, `Room` (dining room with a door that opens to day or night), `Table`, `Family`. Sound helper `creak()` (door).
+
 ### 11.4 Recording problems
 - Small wording changes: keep them and match the subtitles (§3.4).
 - **A spoken mistake that changes a fact** (e.g. "4 na taon" instead of "apat na buwan"): tell the user, explain why it matters, and ask them to re-record just that line. Splice the new take in at that line's source time.
@@ -478,7 +486,36 @@ Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by
 - If the user sends their own script, keep their wording. Fit it to the format: exactly 7 narrated lines (merge or split lines and say so in one line), the silent scene between lines 3 and 4, and their ending as the final punchline. If it has no real facts, offer one verified fact once; don't force it.
 - A short recording (about 80 s) gives a shorter video (89 s for video #9). That's fine; don't pad the scenes.
 
-### 11.8 Worked example: "Nakakain ba ang tae?" (video #5)
+### 11.8 Lessons from video #11 (2026-10-21)
+- **"Green" content** in Pinoy slang means naughty or double-meaning jokes. The channel stays PG, so offer the *pilyo* (cheeky, but clean) angle instead (jowa, kilig, tampo).
+- **The user may write the whole script themselves.** Use it as-is and lay it out in the §3.1 format. If it has no researched facts or no sweet ending, point that out once as an option, then follow the user's choice.
+- **Whisper quirks seen:** it drops short words (`siyudad` was missing in the full pass, then found by re-transcribing that clip), joins words (`higaka` = *hihiga ka*, written with a no-break space so it stays one token), and mis-hears (`mong malaw` = *gumalaw*, merged with `MERGES`). Re-transcribe any doubtful 4–14 s window on its own to check.
+- **Render stills sequentially.** Twenty `remotion still` runs in parallel were killed for running out of memory.
+- **No emoji in DOM overlays.** The headless browser has no emoji font, so they render as boxes.
+- **Kid lying in bed:** wrap `Person` in a group with `rotation-x = -π/2`. The person's feet sit at the group origin, so put the origin near the foot of the bed.
+
+### 11.9 Scripts written but not yet recorded
+Both are final and ready to record; send the clean lines (§3.3) if the user picks one up.
+
+**"Bakit Tumataba Pag May Jowa Na?"** (research: SMU newlywed study 2013; Central Queensland Univ. study of 15,000+ people, about 5.8 kg; correlation only). Silent scene 4 = "The Samgyup Date" (the belt buckle flies off).
+1. May jowa ka bang mataba? O baka naman ikaw ang tumaba mula nang magka-jowa, pero siyempre, "happy weight" lang daw 'yan.
+2. Ayon sa siyensya, may katotohanan naman pala rito: sa isang pag-aaral sa Amerika na sumubaybay sa mga bagong kasal nang apat na taon, mas tumaba ang mga mag-asawang masaya kaysa sa mga hindi.
+3. Bakit kaya? Kapag may jowa ka na, wala ka nang kailangang pa-impress-in, kaya ang dating gym, napalitan na ng milk tea date, samgyup, at "kain tayo, babe" gabi-gabi.
+4. Sa Australia naman, sa pag-aaral ng mahigit labinlimang libong tao, mas mabigat nang halos anim na kilo ang mga may karelasyon kaysa sa mga single.
+5. Pero hindi ito puro masamang balita, dahil ang mga may kasama sa buhay ay mas madalas ding umiiwas sa sigarilyo at mas kumakain ng gulay at prutas.
+6. Kaya ang sikreto, gawin ninyong date ang paglalakad, pagjo-jogging at pagluluto ng masustansyang ulam, para sabay kayong lumalakas, hindi lang basta sabay lumalaki.
+7. Dahil ang tunay na pagmamahal ay hindi lang "kain tayo, babe," kundi "alagaan natin ang isa't isa," pero siyempre, pagkatapos na 'yan ng isang huling samgyup.
+
+**"Natutulog Ba Talaga si Tatay sa Sofa, o Nag-a-update Lang ng System?"** (research: people woken from light N1 sleep often deny they slept; a sleep cycle lasts about 90–110 min; memories are sorted during sleep. The glymphatic "brain washing" claim was left out because newer research disputes it). Silent scene 4 = "The System Update" (progress bar, cat, mosquito). This is the longer version:
+1. Natutulog ba talaga si Tatay sa sofa, o nag-a-update lang siya ng system? Siyempre hindi raw siya tulog, nanonood daw siya ng balita, kahit humihilik na siya nang malakas habang hawak pa rin ang remote na parang ayaw niyang bitawan.
+2. Ayon sa siyensya, may totoo pala sa palusot ni Tatay: sa pinakamababaw na yugto ng tulog, madaling magising ang tao, at madalas ay hindi niya alam na nakatulog na pala siya, kaya buong-tapang niyang sasabihing gising siya.
+3. At kung sisilipin ang loob ng kanyang ulo, parang computer nga ang utak na nagre-restart: dumadaan ito sa iba't ibang yugto ng tulog, mula mababaw hanggang malalim, sa siklong tumatagal nang mga isa't kalahating oras, at umuulit ito nang ilang beses sa buong gabi.
+4. Habang mahimbing ang tulog, inaayos ng utak ang mga alaala ng maghapon, itinatabi ang mahalaga at itinatapon ang hindi na kailangan, parang naglilinis ng mga files para may espasyo ulit para bukas.
+5. Kaya kapag kulang sa tulog si Tatay, para siyang cellphone na lowbat: mabagal, mainit ang ulo, makakalimutin, at madaling mag-hang kahit simpleng tanong lang ni Nanay.
+6. Kaya hayaan na natin siyang mag-update, dahil pagod siya sa maghapong pagtatrabaho para sa atin, at ang tulog ang kanyang pinakamahalagang charger para may lakas ulit siya bukas.
+7. Pero siyempre, huwag na huwag mong ililipat ang channel, dahil kahit nakapikit at humihilik siya, gising pa raw siya at nanonood, at alam daw niya ang buong kuwento.
+
+### 11.10 Worked example: "Nakakain ba ang tae?" (video #5)
 | Scene | Start | Dur | Line (video start) | What happens | Key beat |
 |---|---|---|---|---|---|
 | S1 | 0 | 12.5 | L1 @0.6 | backyard, poop swirl, flies arriving (some with sunglasses), curious kid | — |
