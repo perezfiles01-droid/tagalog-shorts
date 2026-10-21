@@ -421,6 +421,7 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p delivered, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
 | 10 | Nalulungkot Ba ang Kanin? | `videos/kanin` | Kahit gaano kasarap ang ulam, kanin pa rin ang tunay na bida. 🍚💛 | 1080p delivered, 95 s (user's own script read word for word: 8 narrated lines, silent scene after line 4; thumbnail: user's choice) |
 | 11 | May Sixth Sense Ba Talaga ang mga Nanay? | `videos/nanay` | May sixth sense ba talaga si Nanay… o may group chat lang sila ng mga kapitbahay? 👀📱 | 1080p delivered, 104 s (script written by the user, pure comedy with no researched facts; chat-bubble overlays; thumbnail: user's choice) |
+| 12 | What If Napapagod Din ang Electric Fan? | `videos/electric-fan` | Mahalin mo ang electric fan mo, baka bukas mag-resign na rin. 🌀😂 | 1080p delivered, 116 s (user's script word for word: 8 lines, silent scene after line 3; long inner pauses cut by `voice/plan.py` to stay under 2 min; user skipped the preview; thumbnail: user's choice) |
 
 **Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `jeep/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`, `engine`, `squeak`, `cluck`).
 
@@ -456,6 +457,7 @@ Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by
 - **Follow it word for word** when they ask ("please follow the script here"). Don't merge, reword or add facts; only send the clean lines (§3.3) with an English note on anything changed (e.g. finishing a line cut off in their message from an earlier copy).
 - If it has 8 lines instead of 7, put the **silent scene after the line that sets up the twist** (in `kanin`, after line 4, the rice's rebellion), giving 9 scenes. Keep the total under 2 min.
 - Example: `videos/kanin` (9 scenes, `S5` silent, `O3` "0 papuri", `O6` red ✕, `O7` "?!"). New props there: `RiceBowl` and `RiceBall` (a rice character with a `Face`: moods happy/sad/angry/calm, tear, wink, glow, bandana, bindle), `AdoboPot`, `Lechon`, `Spaghetti`, `RiceCooker`, `Hearts`, `Room` (dining room with a door that opens to day or night), `Table`, `Family`. Sound helper `creak()` (door).
+- `videos/electric-fan`: `Fan` (toy stand fan with a face: eye, brow, mouth, cry, sweat, steam, shades, lit speed buttons, blade blur), bedroom `Room` (window day/dusk/night, bed, aircon, curtains), `Lying` person, `RainCloud`, resignation-letter card overlay. `voice/plan.py` lays out the lines automatically and shortens inner pauses over 0.6 s; `build_audio.py` aligns the script to whisper with difflib (no MERGES needed). Sound helpers: `click`, `creak`, `sigh`, `wahwah`, `step`, `rumble`, a speed-following fan hum.
 
 ### 11.4 Recording problems
 - Small wording changes: keep them and match the subtitles (§3.4).
