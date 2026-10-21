@@ -420,7 +420,7 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 8 | Ano ang Mangyayari Kung Sumabog ang Buwan? | `videos/buwan` | Walang forever… pero sana ang buwan, meron. 🌕🥲 | 1080p delivered, 111 s (science timeline with time chips; thumbnail: user's choice) |
 | 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p delivered, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
 | 10 | Nalulungkot Ba ang Kanin? | `videos/kanin` | Kahit gaano kasarap ang ulam, kanin pa rin ang tunay na bida. 🍚💛 | 1080p rendering, 95 s (user's own script read word for word: 8 narrated lines, silent scene after line 4; thumbnail: user's choice) |
-| 11 | May Sixth Sense Ba Talaga ang mga Nanay? | `videos/nanay` | May sixth sense ba talaga si Nanay… o may group chat lang sila ng mga kapitbahay? 👀📱 | 1080p rendering, 104 s (script written by the user, pure comedy with no researched facts; chat-bubble overlays; thumbnail: user's choice) |
+| 11 | May Sixth Sense Ba Talaga ang mga Nanay? | `videos/nanay` | May sixth sense ba talaga si Nanay… o may group chat lang sila ng mga kapitbahay? 👀📱 | 1080p delivered, 104 s (script written by the user, pure comedy with no researched facts; chat-bubble overlays; thumbnail: user's choice) |
 
 **Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `jeep/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`, `engine`, `squeak`, `cluck`).
 
