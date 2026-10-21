@@ -2,7 +2,7 @@
 
 **Read this whole file before doing anything.** It is the complete, exact recipe for how every video on this channel is made, and how Claude talks to the user at each step. A new session must reproduce the same style, flow, settings and message formats **exactly**. Don't improvise a new process, don't skip steps, and don't change any approved setting unless the user asks.
 
-Last updated after video #8 (2026-10-21).
+Last updated after video #9 (2026-10-21).
 
 ---
 
@@ -385,6 +385,7 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 - `utot`: `Puff` (green toot cloud), `Dog`, `LivingRoom`, `Family`, `Tunnel` (intestine), `Bacterium`, `Bubble` (incl. angry stinky face), `Food`, `Nose`, the elevator set, the `×N` counter overlay.
 - `esmiringhoy`: `Cat`, `Heart`, `PhoneLights` over the archipelago, `NightSea`, the word-split overlay, `Card` with a red "?" stamp, the radio booth.
 - `tupperware-ni-nanay`: `Tupper`, `Lid`, `Dish`, `House`, `Barangay` (day/dusk/night, `extraRows`, `lights`), `StringLights`, `Kitchen`, `Cabinet`, `FeastTable`, `Actor`/`CAST`.
+- `jeep`: `Jeep` (open-interior jeepney: benches, riders by seat index, stretchable cabin `len`, PhD driver with mortarboard and glasses, diploma on the mirror, glowing roof sign), `fullRiders(gap)`, `Mouse`, `Street` (two rows of houses along z), `Rocket`, `Einstein`, space-time `Tunnel`, the red ✕ `Cross` overlay.
 - `isang-butil`: `TerraceHill`, `Field` (instanced rice), `Rain`, `Jeepney`, `Stall`, `Islands`, `Town`, `Brand.tsx`.
 - `kit.tsx`: `Person` (pose fields `armL armR spreadL spreadR elbow leg bend sit headTurn bob`; props `seed shirt pants hat mouth longHair hairColor scale children`), `walk(t, speed, phase)`, `Cam`, `Sky`, `mat`, `Tree`, `Cloud`, `Mountain`.
 
@@ -416,8 +417,9 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 6 | Isa Ka Bang Hampaslupa? | `videos/hampaslupa` | Isa ka bang hampaslupa? Baka mali lang ang basehan natin. 🌾👊 | 1080p delivered (6 narrated lines; thumbnail: user's choice) |
 | 7 | Makakaligtas Ka Ba sa Zombie Outbreak? | `videos/zombie` | Makakaligtas ka ba sa zombie outbreak? Mas nakakatakot pala ang ibang outbreak. 🧟‍♂️🧾 | 1080p delivered (thumbnail: user's choice) |
 | 8 | Ano ang Mangyayari Kung Sumabog ang Buwan? | `videos/buwan` | Walang forever… pero sana ang buwan, meron. 🌕🥲 | 1080p delivered, 111 s (science timeline with time chips; thumbnail: user's choice) |
+| 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p rendering, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
 
-**Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `zombie/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`).
+**Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `jeep/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`, `engine`, `squeak`, `cluck`).
 
 ### Voice options already tried (don't re-try)
 Kokoro TTS: accented, rejected. Meta MMS-TTS Tagalog: flat. ElevenLabs Filipino voices: need a paid plan. Edge TTS: blocked. **The user's own recording, enhanced, is the standard.**
@@ -471,6 +473,10 @@ Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by
 - **Thumbnails: always provide 3 options (A/B/C, one ⭐ recommended), but never ask which one the user picked or wait for it.** They choose while uploading manually (user instruction, 2026-10-21). Update §10 as soon as the MP4 is delivered, with "user's choice" in the thumbnail column.
 - The user writes in English or Taglish. Reply in English. Tagalog content is always shown with an English translation in italics.
 - Keep replies short and scannable (bold labels, short lists), and never claim progress you haven't checked.
+
+### 11.7b User-written scripts
+- If the user sends their own script, keep their wording. Fit it to the format: exactly 7 narrated lines (merge or split lines and say so in one line), the silent scene between lines 3 and 4, and their ending as the final punchline. If it has no real facts, offer one verified fact once; don't force it.
+- A short recording (about 80 s) gives a shorter video (89 s for video #9). That's fine; don't pad the scenes.
 
 ### 11.8 Worked example: "Nakakain ba ang tae?" (video #5)
 | Scene | Start | Dur | Line (video start) | What happens | Key beat |
