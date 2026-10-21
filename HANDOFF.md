@@ -2,7 +2,7 @@
 
 **Read this whole file before doing anything.** It is the complete, exact recipe for how every video on this channel is made, and how Claude talks to the user at each step. A new session must reproduce the same style, flow, settings and message formats **exactly**. Don't improvise a new process, don't skip steps, and don't change any approved setting unless the user asks.
 
-Last updated after video #7 (2026-10-21).
+Last updated after video #8 (2026-10-21).
 
 ---
 
@@ -415,6 +415,7 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 5 | Nakakain Ba ang Tae? Bakit Paborito Ito ng mga Langaw? | `videos/tae` | Nakakain ba ang tae? Ang sagot ng siyensya… at ni Nanay. 😂🪰 | 1080p delivered |
 | 6 | Isa Ka Bang Hampaslupa? | `videos/hampaslupa` | Isa ka bang hampaslupa? Baka mali lang ang basehan natin. 🌾👊 | 1080p delivered (6 narrated lines; thumbnail: user's choice) |
 | 7 | Makakaligtas Ka Ba sa Zombie Outbreak? | `videos/zombie` | Makakaligtas ka ba sa zombie outbreak? Mas nakakatakot pala ang ibang outbreak. 🧟‍♂️🧾 | 1080p delivered (thumbnail: user's choice) |
+| 8 | Ano ang Mangyayari Kung Sumabog ang Buwan? | `videos/buwan` | Walang forever… pero sana ang buwan, meron. 🌕🥲 | 1080p delivered, 111 s (science timeline with time chips; thumbnail: user's choice) |
 
 **Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `zombie/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`).
 
