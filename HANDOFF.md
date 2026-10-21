@@ -417,7 +417,7 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 6 | Isa Ka Bang Hampaslupa? | `videos/hampaslupa` | Isa ka bang hampaslupa? Baka mali lang ang basehan natin. 🌾👊 | 1080p delivered (6 narrated lines; thumbnail: user's choice) |
 | 7 | Makakaligtas Ka Ba sa Zombie Outbreak? | `videos/zombie` | Makakaligtas ka ba sa zombie outbreak? Mas nakakatakot pala ang ibang outbreak. 🧟‍♂️🧾 | 1080p delivered (thumbnail: user's choice) |
 | 8 | Ano ang Mangyayari Kung Sumabog ang Buwan? | `videos/buwan` | Walang forever… pero sana ang buwan, meron. 🌕🥲 | 1080p delivered, 111 s (science timeline with time chips; thumbnail: user's choice) |
-| 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p rendering, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
+| 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p delivered, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
 
 **Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `jeep/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`, `engine`, `squeak`, `cluck`).
 
