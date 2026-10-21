@@ -1,40 +1,45 @@
-"""Nakakain ba ang tae: cut the voice into lines, place them on the timeline,
-generate a playful original score + scene ambience, mix at the approved v3
-balance, and write video/public/mix.wav + video/src/timeline.json."""
+"""What if nag-AWOL ang alarm clock: cut the voice into lines, place them on the
+timeline, generate the playful original score + bedroom ambience, mix at the
+approved v3 balance, and write video/public/mix.wav + video/src/timeline.json."""
 import json, subprocess, numpy as np, soundfile as sf
 import sfx
 from sfx import SR, filt, window, place, env, chirps, clink, horn, thump, murmur, rng
 
-TOTAL = 106.0
+TOTAL = 132.0
 VIDEO = "../video"
 
 # (source start, source end, video start, subtitle text, gold words)
+# a token "x|n" covers n whisper words; "~" shows as a space inside one token
 LINES = [
-    (1.30, 12.50, 0.6, "Nakakain ba ang mga tae? Kung tuwang-tuwa ang mga langaw dito, siguro masarap ito… o baka hindi?", ["tae?"]),
-    (13.90, 25.60, 13.0, "Ang sagot: hindi, kahit kailan. Pero para sa langaw, isa itong handaan, at may dahilan kung bakit.", ["hindi,"]),
-    (26.60, 39.90, 25.6, "Ang tae ay halos tatlong-kapat na tubig, at may natitira pa itong sustansya mula sa pagkaing hindi natunaw, kaya para sa langaw, para itong buffet.", ["tubig,", "buffet."]),
-    (41.20, 56.10, 47.6, "Alam mo ba na ang langaw ay tumitikim gamit ang kanyang mga paa? At dahil wala itong ngipin, nilalabasan muna nito ng laway ang pagkain para matunaw bago sipsipin.", ["paa?", "laway"]),
-    (57.00, 70.00, 63.2, "Ang problema, pagkatapos sa tae, puwede itong dumapo sa ating pagkain, dala ang mahigit isandaang uri ng mikrobyo na maaaring magdulot ng sakit.", ["mikrobyo"]),
-    (71.10, 83.30, 76.9, "Kaya laging takpan ang pagkain, maghugas ng kamay gamit ang sabon, at panatilihing malinis ang banyo, para walang handaan ang mga langaw.", ["sabon,", "malinis"]),
-    (84.80, 99.40, 89.8, "Para sa langaw, ang tae ay paboritong pagkain. Pero para sa atin, ang pinakamasarap na ulam ay ang kinakain nang malinis at ligtas.", ["ligtas."]),
+    (1.00, 13.05, 0.5, "What if nagsawa na pala ang alarm clock mo na gisingin ka araw-araw? Imagine mo, araw-araw siyang bumabangon nang maaga para lang gisingin ka, pero ikaw, sarap na sarap sa tulog!", ["nagsawa"]),
+    (13.90, 27.40, 13.3, "Araw-araw, alas-sais|2 pa lang ng umaga, todo~tunog na siya. Pero ano ang ginagawa mo? Snooze! Limang minuto pa raw. Tapos limang minuto ulit, hanggang umabot na ng isang oras!", ["Snooze!", "oras!"]),
+    (28.15, 42.95, 27.5, "Siguro sa isip ng alarm clock, \u201cAno ba 'to? Ginagawa ko naman ang trabaho ko, pero lagi akong ini-ignore! Hindi ba niya alam na may pangarap din ako sa buhay?\u201d Parang empleyadong walang sweldo at walang day~off!", ["ini-ignore!", "pangarap", "sweldo"]),
+    (43.55, 58.40, 43.0, "Hanggang isang Lunes ng umaga, nagdesisyon siyang sumuko. Alas-sais|2 na, alas-siyete,|2 alas-otso\u2026|2 Pero tahimik pa rin ang kwarto mo. Wala nang tunog, wala nang vibration. Nag-AWOL na talaga siya!", ["Lunes", "Nag-AWOL"]),
+    (59.60, 78.45, 67.1, "Nagising ka na lang alas-onse|2 na ng umaga! Pagtingin mo sa oras, bigla kang napabangon. \u201cANO?! LATE NA AKO!\u201d Nagmamadali kang maligo, magbihis, at maghanap ng medyas na magkapareho. Pati almusal, hindi mo na nagawang kainin!", ["alas-onse", "LATE"]),
+    (79.40, 95.10, 86.7, "Pagkatapos lahat ng stress, tinanong mo ang alarm clock mo, \u201cBakit hindi ka tumunog?! Ano bang problema mo?\u201d Bigla siyang sumagot, \u201cSorry, boss. Nag-leave ako. Deserve ko rin magpahinga! Araw-araw mo 'kong sini-snooze. Akala mo ba wala akong feelings?\u201d", ["Nag-leave", "feelings?\u201d"]),
+    (96.30, 113.40, 103.1, "Simula noon, natuto ka nang bumangon agad kapag tumunog ang alarm. Hindi mo na siya sini-snooze kahit antok na antok ka pa. Kasi takot kang baka mag-AWOL ulit siya. Kung pati cellphone mo mag-resign, baka~pati trabaho mo mawala!", ["mag-AWOL", "mag-resign,"]),
+    (114.05, 123.10, 120.9, "Kaya tandaan, mga kaibigan, huwag abusuhin ang alarm clock ninyo. Baka isang araw, hindi lang siya ang mag-AWOL\u2026 pati ikaw, sa trabaho na rin!", ["mag-AWOL\u2026", "trabaho"]),
 ]
-# whisper split these words in two; merge them back
-MERGES = {2: [("tatlong", "kapat")]}
+FIRST = [0, 33, 64, 103, 137, 175, 216, 256, 281]  # whisper word index where each line starts
 
 def words_for_line(i, W):
     s, e, at, text, gold = LINES[i]
-    first = sum(len(LINES[j][3].split(" ")) + len(MERGES.get(j, [])) for j in range(i))
-    ws = W[first:first + len(text.split(" ")) + len(MERGES.get(i, []))]
-    for a, b in MERGES.get(i, []):
-        for j in range(len(ws) - 1):
-            if ws[j]["w"] == a and ws[j + 1]["w"] == b:
-                ws[j] = {"w": a + b, "s": ws[j]["s"], "e": ws[j + 1]["e"]}
-                del ws[j + 1]
-                break
-    script = text.split(" ")
-    assert len(script) == len(ws), (i, len(script), len(ws), [w["w"] for w in ws])
-    off = at - s
-    return [{"w": t, "s": round(max(w["s"], s) + off, 3), "e": round(min(w["e"], e) + off, 3), "gold": t in set(gold)} for t, w in zip(script, ws)]
+    raw = W[FIRST[i]:FIRST[i + 1]]
+    ws = []  # whisper glued "-x" fragments back onto the word before
+    for w in raw:
+        if w["w"].startswith("-") and ws: ws[-1] = {"w": ws[-1]["w"] + w["w"], "s": ws[-1]["s"], "e": w["e"]}
+        else: ws.append(dict(w))
+    toks = []
+    for tok in text.split(" "):
+        n = 1
+        if "|" in tok: tok, n = tok.rsplit("|", 1); n = int(n)
+        toks.append((tok.replace("~", " "), n))
+    assert sum(n for _, n in toks) == len(ws), (i, sum(n for _, n in toks), len(ws), [w["w"] for w in ws])
+    off = at - s; out = []; k = 0
+    for tok, n in toks:
+        a, b = ws[k], ws[k + n - 1]; k += n
+        out.append({"w": tok, "s": round(max(a["s"], s) + off, 3), "e": round(min(b["e"], e) + off, 3), "gold": tok in set(gold)})
+    return out
 
 def voice_track():
     v, sr = sf.read("enhanced.wav")
@@ -67,7 +72,7 @@ def music():
     t = 0.0; b = 0
     mel = [72, 74, 76, 79, 76, 74, 72, 67]
     while t < TOTAL - 1:
-        detective = 39.2 <= t < 47.2  # nature-documentary hush for the slow-motion fly
+        detective = 58.1 <= t < 66.6  # sneaky theme for the clock's great escape
         night = False
         chord = (minor if detective else prog)[(b // 8) % 4]
         # bass on beats 1 and 3, pluck chord on the off-beats
@@ -87,7 +92,7 @@ def music():
     # pad underneath, warmer at the end
     tt = np.arange(n) / SR
     pad = sum(np.sin(2 * np.pi * hz(m) * tt) for m in (60, 64, 67)) * 0.012
-    pad *= np.clip((tt - 89) / 5, 0, 1) * np.clip((TOTAL - tt) / 4, 0, 1) + 0.3 * window(n, 0, 39.2, 2)
+    pad *= np.clip((tt - 120.4) / 5, 0, 1) * np.clip((TOTAL - tt) / 4, 0, 1) + 0.3 * window(n, 0, 42.5, 2)
     out += pad[:, None]
     fi = np.clip(tt / 1.5, 0, 1) * np.clip((TOTAL - tt) / 4, 0, 1)
     return out * fi[:, None]
@@ -136,46 +141,52 @@ def buzz_track(n, t, level):
     x = sum(np.sin(k * ph) / k for k in range(1, 6))
     return filt(x, "band", [150, 2500]) * level
 
+def bell(dur):
+    """alarm clock bell: a fast hammer trill on two detuned metal tones"""
+    n = int(dur * SR); tt = np.arange(n) / SR
+    x = np.sin(2 * np.pi * 2350 * tt) + 0.7 * np.sin(2 * np.pi * 3120 * tt) + 0.3 * np.sin(2 * np.pi * 4700 * tt)
+    trill = (np.sin(2 * np.pi * 24 * tt) > 0) * np.exp(-((tt * 24) % 1) * 4)
+    return x * trill * np.clip(tt / 0.01, 0, 1) * np.clip((dur - tt) / 0.05, 0, 1) / 2
+
+def tick():
+    n = int(0.03 * SR)
+    return filt(rng.standard_normal(n), "band", [2000, 6000]) * env(n, 0.001, 0.008)
+
 def ambience(voice):
     n = int(TOTAL * SR); t = np.arange(n) / SR
     out = np.zeros((n, 2)); noise = lambda: rng.standard_normal(n)
-    # flies buzzing: grows in scene 1, stays through 3, quieter later
-    lvl = np.clip((t - 1.2) / 8, 0, 1) * window(n, 0, 39.4, 0.6) * 0.05
-    lvl += window(n, 39.2, 41.8, 0.4) * 0.03 + window(n, 63.8, 68.2, 0.5) * 0.05 + window(n, 77.8, 80.2, 0.4) * 0.03
-    bz = buzz_track(n, t, lvl)
-    out[:, 0] += bz * (0.6 + 0.4 * np.sin(2 * np.pi * 0.3 * t)); out[:, 1] += bz * (0.6 - 0.4 * np.sin(2 * np.pi * 0.3 * t))
-    chirps(out, 0.5, 39, 0.5, 0.03)
-    # S2: the red X stamp, Nanay's tsinelas
-    place(out, thump(), 12.5 + 2.0, 0.45, 0.5)
-    place(out, whoosh(0.4), 12.5 + 2.3, 0.15, 0.6)
-    place(out, clink() * 0.6, 12.5 + 2.7, 0.2, 0.6)
-    # S3: menu items popping out
-    for i in range(18):
-        place(out, pop() * 0.5, 25.2 + 1.0 + i * 0.35, 0.06, rng.random())
-    place(out, ding(), 25.2 + 12.8, 0.08, 0.5)
-    # S4: slow-motion landing sparkle and a little happy-dance bounce
-    place(out, tone(hz(96), 1.5, 3), 39.2 + 2.5, 0.05, 0.5)
-    for k in range(5):
-        place(out, pop() * 0.4, 39.2 + 3.0 + k * 0.4, 0.06, 0.5)
-    # S5: feet glow chime, saliva drip, the sip
-    place(out, tone(hz(88), 1.2, 3), 47.2 + 4.5, 0.05, 0.5)
-    place(out, blip(700), 47.2 + 11.3, 0.12, 0.6)
-    sl = filt(noise(), "band", [300, 1200]) * window(n, 47.2 + 12.6, 47.2 + 14.8, 0.2) * (0.5 + 0.5 * np.sin(2 * np.pi * 9 * t))
-    out += (sl * 0.03)[:, None]
-    # S6: the family gasps
-    gs = np.zeros(n); gs[int(68 * SR):] = murmur(n - int(68 * SR), voice, voices=3); gs *= window(n, 68.4, 69.6, 0.2)
-    out += (gs * 0.12)[:, None]
-    # S7: cover clatter, tap water, toilet lid click
-    place(out, clink(), 76.5 + 1.55, 0.2, 0.4)
-    wt = filt(noise(), "band", [1500, 7000]) * window(n, 81.0, 84.4, 0.3)
-    out += (wt * 0.03)[:, None]
-    place(out, lid_click() if "lid_click" in globals() else clink(), 76.5 + 9.4, 0.4, 0.6)
-    # S8: sunset crickets, family chatter fading as we pull away
-    cr = np.sin(2 * np.pi * 4700 * t) * (np.sin(2 * np.pi * 28 * t) > 0.3) * (0.5 + 0.5 * np.sin(2 * np.pi * 0.9 * t))
-    out += (cr * window(n, 89.4, 106, 1.5) * 0.006)[:, None]
-    fm = np.zeros(n); fm[int(89.4 * SR):] = murmur(n - int(89.4 * SR), voice, voices=5)
-    fm *= window(n, 89.6, 105.5, 1.0) * np.clip((103 - t) / 10, 0, 1)
-    out += (fm * 0.05)[:, None]
+    chirps(out, 0.5, 42, 0.4, 0.02); chirps(out, 103, 131, 0.5, 0.025)
+    # S1/S2/S4: soft snoring from the bed
+    sn = filt(noise(), "band", [120, 600]) * np.clip(np.sin(2 * np.pi * 0.3 * t), 0, 1) ** 2
+    sn *= window(n, 0.3, 13.6, 0.5) + window(n, 27, 42, 0.5) + window(n, 43, 66.6, 0.5) + window(n, 66.6, 73.0, 0.3)
+    out += (sn * 0.025)[:, None]
+    # S2: ring, slap, snooze pops, ring again, the hour
+    place(out, bell(6.6), 13.8, 0.12, 0.6); place(out, thump(), 20.4, 0.4, 0.4)
+    place(out, pop(), 21.5, 0.15, 0.5); place(out, bell(0.7), 23.1, 0.12, 0.6); place(out, thump(), 23.8, 0.4, 0.4)
+    place(out, pop(), 24.0, 0.15, 0.5); place(out, ding(), 25.3, 0.1, 0.5)
+    # S3: overlays pop
+    for k in (33.8, 36.4): place(out, pop(), k, 0.14, 0.5)
+    place(out, ding(), 40.2, 0.1, 0.5)
+    # S4: the clock ticking through the silence, the hours, the AWOL stamp
+    for k in np.arange(42.6, 58.0, 1.0): place(out, tick(), k, 0.12, 0.6)
+    for k in (43.5, 47.3, 48.7, 49.8): place(out, pop(), k, 0.12, 0.5)
+    place(out, thump(), 56.26, 0.45, 0.5)
+    # S5: the great escape: hop, tiny footsteps, the door, the wave
+    place(out, boing(), 59.4, 0.15, 0.6)
+    for k in np.arange(60.3, 64.1, 0.25): place(out, pop() * 0.5, k, 0.05, 0.4 + 0.3 * rng.random())
+    place(out, whoosh(0.6), 61.1, 0.12, 0.8); place(out, ding(), 64.2, 0.07, 0.8)
+    # S6: 11:00!, jump up, panic, running about, socks, the toast
+    place(out, ding(), 68.1, 0.1, 0.5); place(out, boing(), 73.0, 0.15, 0.4)
+    place(out, horn(), 76.18, 0.12, 0.5)
+    for k in np.arange(77.6, 85.5, 0.22): place(out, thump() * 0.4, k, 0.06, 0.3 + 0.4 * rng.random())
+    place(out, whoosh(0.4), 80.2, 0.12, 0.5); place(out, thump(), 83.2, 0.3, 0.5)
+    # S7: "Bakit?!", the ON LEAVE stamp, feelings
+    place(out, pop(), 89.4, 0.15, 0.5); place(out, thump(), 95.92, 0.45, 0.5); place(out, ding(), 101.76, 0.08, 0.5)
+    # S8: one ring and straight up; thumbs-up; the phone's resignation
+    place(out, bell(0.8), 103.6, 0.12, 0.6); place(out, boing(), 104.1, 0.15, 0.4)
+    place(out, ding(), 105.6, 0.08, 0.5); place(out, pop(), 112.2, 0.14, 0.5); place(out, thump(), 117.1, 0.45, 0.5)
+    # S9: the high-five
+    place(out, clink(), 127.74, 0.3, 0.5); place(out, pop(), 127.76, 0.2, 0.5); place(out, ding(), 127.9, 0.08, 0.5)
     return out
 
 def main():

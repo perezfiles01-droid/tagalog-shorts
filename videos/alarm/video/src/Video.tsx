@@ -8,7 +8,7 @@ import {AutoBatch} from './batch';
 const IP = getInputProps() as {batch?: boolean; noAudio?: boolean; noSubs?: boolean; noScene?: boolean};
 const BATCH = IP.batch !== false;
 import {H, W} from './kit';
-import {O2, O3, O6, S1, S2, S3, S4, S5, S6, S7, S8} from './scenes';
+import {O1, O2, O3, O4, O6, O7, O8, O9, S1, S2, S3, S4, S5, S6, S7, S8, S9} from './scenes';
 import timeline from './timeline.json';
 
 const fontFamily = 'NewsreaderItalic';
@@ -20,18 +20,19 @@ new FontFace(fontFamily, `url(${staticFile('newsreader-italic.woff2')})`, {style
 		continueRender(fontReady);
 	});
 
-export const TOTAL = 106;
+export const TOTAL = 132;
 const LEAD = 0.35; // crossfade half-width (s)
 type Scene = {C: React.FC<{t: number}>; O?: React.FC<{t: number}>; start: number; dur: number};
 const SCENES: Scene[] = [
-	{C: S1, start: 0, dur: 12.5},
-	{C: S2, O: O2, start: 12.5, dur: 12.7},
-	{C: S3, O: O3, start: 25.2, dur: 14},
-	{C: S4, start: 39.2, dur: 8},
-	{C: S5, start: 47.2, dur: 15.6},
-	{C: S6, O: O6, start: 62.8, dur: 13.7},
-	{C: S7, start: 76.5, dur: 12.9},
-	{C: S8, start: 89.4, dur: 16.6},
+	{C: S1, O: O1, start: 0, dur: 12.8},
+	{C: S2, O: O2, start: 12.8, dur: 14.2},
+	{C: S3, O: O3, start: 27.0, dur: 15.5},
+	{C: S4, O: O4, start: 42.5, dur: 15.6},
+	{C: S5, start: 58.1, dur: 8.5},
+	{C: S6, O: O6, start: 66.6, dur: 19.6},
+	{C: S7, O: O7, start: 86.2, dur: 16.4},
+	{C: S8, O: O8, start: 102.6, dur: 17.8},
+	{C: S9, O: O9, start: 120.4, dur: 11.6},
 ];
 
 const SceneLayer: React.FC<{C: React.FC<{t: number}>; O?: React.FC<{t: number}>; dur: number; first: boolean; last: boolean}> = ({C, O, dur, first, last}) => {
@@ -109,7 +110,7 @@ const Subtitles: React.FC = () => {
 	return null;
 };
 
-export const Tae: React.FC = () => {
+export const Alarm: React.FC = () => {
 	const f = useCurrentFrame();
 	const FPS = useVideoConfig().fps;
 	const t = f / FPS;

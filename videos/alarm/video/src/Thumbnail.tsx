@@ -1,10 +1,10 @@
 import React from 'react';
 import {AbsoluteFill, continueRender, delayRender, staticFile} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
-import {S1, S2, S3, S4, S5, S6, S7, S8} from './scenes';
+import {S1, S2, S3, S4, S5, S6, S7, S8, S9} from './scenes';
 import {AutoBatch} from './batch';
 
-const SCENES: Record<string, React.FC<{t: number}>> = {S1, S2, S3, S4, S5, S6, S7, S8};
+const SCENES: Record<string, React.FC<{t: number}>> = {S1, S2, S3, S4, S5, S6, S7, S8, S9};
 const thumbFont = 'NewsreaderItalic';
 
 // video thumbnail: a scene still + title in the subtitle typeface
