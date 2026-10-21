@@ -9,7 +9,7 @@ export const Root: React.FC = () => (
 		<Composition id="Zombie" component={Zombie} durationInFrames={TOTAL * FPS} fps={FPS} width={W} height={H} />
 		<Composition id="Preview" component={Zombie} durationInFrames={TOTAL * 15} fps={15} width={W} height={H} />
 		{[
-			{id: 'ThumbA', scene: 'S1', t: 11.0},
+			{id: 'ThumbA', scene: 'S4', t: 2.0},
 			{id: 'ThumbB', scene: 'S5', t: 7.0},
 			{id: 'ThumbC', scene: 'S8', t: 9.3},
 		].map((c) => (
