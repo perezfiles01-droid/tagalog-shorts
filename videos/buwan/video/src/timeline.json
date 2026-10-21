@@ -1,0 +1,1327 @@
+[
+ {
+  "start": 0.5,
+  "words": [
+   {
+    "w": "Ano",
+    "s": 0.64,
+    "e": 1.3,
+    "gold": false
+   },
+   {
+    "w": "nga",
+    "s": 1.3,
+    "e": 1.5,
+    "gold": false
+   },
+   {
+    "w": "ba",
+    "s": 1.5,
+    "e": 1.7,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 1.7,
+    "e": 1.88,
+    "gold": false
+   },
+   {
+    "w": "mangyayari",
+    "s": 1.88,
+    "e": 2.8,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 2.8,
+    "e": 3.22,
+    "gold": false
+   },
+   {
+    "w": "biglang",
+    "s": 3.22,
+    "e": 3.64,
+    "gold": false
+   },
+   {
+    "w": "sumabog",
+    "s": 3.64,
+    "e": 4.14,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 4.14,
+    "e": 4.3,
+    "gold": false
+   },
+   {
+    "w": "buwan?",
+    "s": 4.3,
+    "e": 5.24,
+    "gold": true
+   },
+   {
+    "w": "Una",
+    "s": 5.56,
+    "e": 5.76,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 5.76,
+    "e": 5.96,
+    "gold": false
+   },
+   {
+    "w": "lahat,",
+    "s": 5.96,
+    "e": 6.84,
+    "gold": false
+   },
+   {
+    "w": "siguradong",
+    "s": 7.1,
+    "e": 7.54,
+    "gold": false
+   },
+   {
+    "w": "trending",
+    "s": 7.54,
+    "e": 7.88,
+    "gold": false
+   },
+   {
+    "w": "agad",
+    "s": 7.88,
+    "e": 8.14,
+    "gold": false
+   },
+   {
+    "w": "ito",
+    "s": 8.14,
+    "e": 8.34,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 8.34,
+    "e": 8.5,
+    "gold": false
+   },
+   {
+    "w": "Facebook,",
+    "s": 8.5,
+    "e": 9.04,
+    "gold": true
+   },
+   {
+    "w": "at",
+    "s": 9.04,
+    "e": 9.84,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 9.84,
+    "e": 10.06,
+    "gold": false
+   },
+   {
+    "w": "magpo-post",
+    "s": 10.06,
+    "e": 10.58,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 10.58,
+    "e": 10.78,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 10.78,
+    "e": 11.16,
+    "gold": false
+   },
+   {
+    "w": "\"sana",
+    "s": 11.16,
+    "e": 11.86,
+    "gold": false
+   },
+   {
+    "w": "all,",
+    "s": 11.86,
+    "e": 12.18,
+    "gold": false
+   },
+   {
+    "w": "buo",
+    "s": 12.3,
+    "e": 12.42,
+    "gold": false
+   },
+   {
+    "w": "pa.\"",
+    "s": 12.42,
+    "e": 12.98,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 13.75,
+  "words": [
+   {
+    "w": "Sa",
+    "s": 14.0,
+    "e": 14.16,
+    "gold": false
+   },
+   {
+    "w": "unang",
+    "s": 14.16,
+    "e": 14.5,
+    "gold": false
+   },
+   {
+    "w": "oras,",
+    "s": 14.5,
+    "e": 15.26,
+    "gold": true
+   },
+   {
+    "w": "hindi",
+    "s": 15.4,
+    "e": 15.68,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 15.68,
+    "e": 15.86,
+    "gold": false
+   },
+   {
+    "w": "ito",
+    "s": 15.86,
+    "e": 16.0,
+    "gold": false
+   },
+   {
+    "w": "katapusan",
+    "s": 16.0,
+    "e": 16.44,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 16.44,
+    "e": 16.62,
+    "gold": false
+   },
+   {
+    "w": "mundo,",
+    "s": 16.62,
+    "e": 17.34,
+    "gold": false
+   },
+   {
+    "w": "dahil",
+    "s": 18.02,
+    "e": 18.24,
+    "gold": false
+   },
+   {
+    "w": "ayon",
+    "s": 18.24,
+    "e": 18.58,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 18.58,
+    "e": 18.72,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 18.72,
+    "e": 18.96,
+    "gold": false
+   },
+   {
+    "w": "siyentipiko,",
+    "s": 18.96,
+    "e": 19.82,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 20.52,
+    "e": 20.62,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 20.62,
+    "e": 20.88,
+    "gold": false
+   },
+   {
+    "w": "piraso",
+    "s": 20.88,
+    "e": 21.32,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 21.32,
+    "e": 21.52,
+    "gold": false
+   },
+   {
+    "w": "buwan",
+    "s": 21.52,
+    "e": 22.24,
+    "gold": false
+   },
+   {
+    "w": "ay",
+    "s": 22.24,
+    "e": 22.62,
+    "gold": false
+   },
+   {
+    "w": "iikot",
+    "s": 22.62,
+    "e": 23.08,
+    "gold": true
+   },
+   {
+    "w": "pa",
+    "s": 23.08,
+    "e": 23.24,
+    "gold": false
+   },
+   {
+    "w": "rin",
+    "s": 23.24,
+    "e": 23.32,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 23.32,
+    "e": 23.5,
+    "gold": false
+   },
+   {
+    "w": "Earth",
+    "s": 23.5,
+    "e": 23.94,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 23.94,
+    "e": 24.38,
+    "gold": false
+   },
+   {
+    "w": "unti-unting",
+    "s": 24.38,
+    "e": 25.12,
+    "gold": false
+   },
+   {
+    "w": "kakalat",
+    "s": 25.12,
+    "e": 25.52,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 25.52,
+    "e": 25.68,
+    "gold": false
+   },
+   {
+    "w": "langit.",
+    "s": 25.68,
+    "e": 26.0,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 26.7,
+  "words": [
+   {
+    "w": "Sa",
+    "s": 26.7,
+    "e": 26.95,
+    "gold": false
+   },
+   {
+    "w": "unang",
+    "s": 26.95,
+    "e": 27.19,
+    "gold": false
+   },
+   {
+    "w": "gabi,",
+    "s": 27.19,
+    "e": 28.03,
+    "gold": true
+   },
+   {
+    "w": "magkakaroon",
+    "s": 28.27,
+    "e": 29.03,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 29.03,
+    "e": 29.29,
+    "gold": false
+   },
+   {
+    "w": "napakagandang",
+    "s": 29.29,
+    "e": 29.99,
+    "gold": false
+   },
+   {
+    "w": "ulan",
+    "s": 29.99,
+    "e": 30.23,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 30.23,
+    "e": 30.41,
+    "gold": false
+   },
+   {
+    "w": "bulalakaw,",
+    "s": 30.41,
+    "e": 31.63,
+    "gold": true
+   },
+   {
+    "w": "kaya",
+    "s": 31.89,
+    "e": 32.05,
+    "gold": false
+   },
+   {
+    "w": "buong",
+    "s": 32.05,
+    "e": 32.33,
+    "gold": false
+   },
+   {
+    "w": "barangay",
+    "s": 32.33,
+    "e": 32.97,
+    "gold": false
+   },
+   {
+    "w": "ay",
+    "s": 32.97,
+    "e": 33.23,
+    "gold": false
+   },
+   {
+    "w": "nasa",
+    "s": 33.23,
+    "e": 33.49,
+    "gold": false
+   },
+   {
+    "w": "labas",
+    "s": 33.49,
+    "e": 33.93,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 33.93,
+    "e": 34.27,
+    "gold": false
+   },
+   {
+    "w": "nagwi-wish,",
+    "s": 34.27,
+    "e": 35.17,
+    "gold": false
+   },
+   {
+    "w": "pero",
+    "s": 36.03,
+    "e": 36.23,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 36.23,
+    "e": 36.49,
+    "gold": false
+   },
+   {
+    "w": "iba,",
+    "s": 36.49,
+    "e": 36.75,
+    "gold": false
+   },
+   {
+    "w": "nagwi-wish",
+    "s": 37.63,
+    "e": 38.29,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 38.29,
+    "e": 38.51,
+    "gold": false
+   },
+   {
+    "w": "sana",
+    "s": 38.51,
+    "e": 38.75,
+    "gold": false
+   },
+   {
+    "w": "walang",
+    "s": 38.75,
+    "e": 39.13,
+    "gold": false
+   },
+   {
+    "w": "tumama",
+    "s": 39.13,
+    "e": 39.59,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 39.59,
+    "e": 39.75,
+    "gold": false
+   },
+   {
+    "w": "bubong",
+    "s": 39.75,
+    "e": 40.09,
+    "gold": false
+   },
+   {
+    "w": "nila.",
+    "s": 40.09,
+    "e": 40.49,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 49.35,
+  "words": [
+   {
+    "w": "Sa",
+    "s": 49.53,
+    "e": 49.75,
+    "gold": false
+   },
+   {
+    "w": "unang",
+    "s": 49.75,
+    "e": 50.07,
+    "gold": false
+   },
+   {
+    "w": "araw,",
+    "s": 50.07,
+    "e": 50.87,
+    "gold": true
+   },
+   {
+    "w": "halos",
+    "s": 51.29,
+    "e": 51.59,
+    "gold": false
+   },
+   {
+    "w": "hindi",
+    "s": 51.59,
+    "e": 51.81,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 51.81,
+    "e": 51.97,
+    "gold": false
+   },
+   {
+    "w": "gumagalaw",
+    "s": 51.97,
+    "e": 52.45,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 52.45,
+    "e": 52.59,
+    "gold": false
+   },
+   {
+    "w": "dagat",
+    "s": 52.59,
+    "e": 52.93,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 52.93,
+    "e": 53.13,
+    "gold": false
+   },
+   {
+    "w": "tabing-baybayin,",
+    "s": 53.13,
+    "e": 54.39,
+    "gold": false
+   },
+   {
+    "w": "dahil",
+    "s": 54.93,
+    "e": 55.03,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 55.03,
+    "e": 55.25,
+    "gold": false
+   },
+   {
+    "w": "buwan",
+    "s": 55.25,
+    "e": 55.43,
+    "gold": false
+   },
+   {
+    "w": "pala",
+    "s": 55.43,
+    "e": 56.21,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 56.47,
+    "e": 56.61,
+    "gold": false
+   },
+   {
+    "w": "pangunahing",
+    "s": 56.61,
+    "e": 57.15,
+    "gold": false
+   },
+   {
+    "w": "humihila",
+    "s": 57.15,
+    "e": 57.71,
+    "gold": true
+   },
+   {
+    "w": "sa",
+    "s": 57.71,
+    "e": 57.93,
+    "gold": false
+   },
+   {
+    "w": "tubig,",
+    "s": 57.93,
+    "e": 58.91,
+    "gold": false
+   },
+   {
+    "w": "kaya",
+    "s": 59.13,
+    "e": 59.29,
+    "gold": false
+   },
+   {
+    "w": "malilito",
+    "s": 59.29,
+    "e": 59.95,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 59.95,
+    "e": 60.17,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 60.17,
+    "e": 60.39,
+    "gold": false
+   },
+   {
+    "w": "mangingisda",
+    "s": 60.39,
+    "e": 61.45,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 61.45,
+    "e": 61.75,
+    "gold": false
+   },
+   {
+    "w": "kailan",
+    "s": 61.75,
+    "e": 62.21,
+    "gold": false
+   },
+   {
+    "w": "papalaot.",
+    "s": 62.21,
+    "e": 62.95,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 63.65,
+  "words": [
+   {
+    "w": "Sa",
+    "s": 63.65,
+    "e": 63.88,
+    "gold": false
+   },
+   {
+    "w": "loob",
+    "s": 63.88,
+    "e": 64.18,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 64.18,
+    "e": 64.36,
+    "gold": false
+   },
+   {
+    "w": "ilang",
+    "s": 64.36,
+    "e": 64.62,
+    "gold": false
+   },
+   {
+    "w": "taon,",
+    "s": 64.62,
+    "e": 65.38,
+    "gold": true
+   },
+   {
+    "w": "magiging",
+    "s": 65.6,
+    "e": 66.06,
+    "gold": false
+   },
+   {
+    "w": "singsing",
+    "s": 66.06,
+    "e": 66.56,
+    "gold": true
+   },
+   {
+    "w": "ang",
+    "s": 66.56,
+    "e": 66.76,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 66.76,
+    "e": 66.94,
+    "gold": false
+   },
+   {
+    "w": "piraso",
+    "s": 66.94,
+    "e": 67.42,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 67.42,
+    "e": 67.62,
+    "gold": false
+   },
+   {
+    "w": "paligid",
+    "s": 67.62,
+    "e": 67.94,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 67.94,
+    "e": 68.12,
+    "gold": false
+   },
+   {
+    "w": "Earth,",
+    "s": 68.12,
+    "e": 69.0,
+    "gold": false
+   },
+   {
+    "w": "parang",
+    "s": 69.28,
+    "e": 69.42,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 69.42,
+    "e": 69.6,
+    "gold": false
+   },
+   {
+    "w": "Saturn,",
+    "s": 69.6,
+    "e": 70.14,
+    "gold": true
+   },
+   {
+    "w": "kaya",
+    "s": 71.1,
+    "e": 71.24,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 71.24,
+    "e": 71.44,
+    "gold": false
+   },
+   {
+    "w": "gabi,",
+    "s": 71.44,
+    "e": 72.3,
+    "gold": false
+   },
+   {
+    "w": "mas",
+    "s": 72.52,
+    "e": 72.88,
+    "gold": false
+   },
+   {
+    "w": "madilim",
+    "s": 72.88,
+    "e": 73.26,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 73.26,
+    "e": 73.46,
+    "gold": false
+   },
+   {
+    "w": "paligid,",
+    "s": 73.46,
+    "e": 74.2,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 74.2,
+    "e": 74.56,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 74.56,
+    "e": 74.72,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 74.72,
+    "e": 74.98,
+    "gold": false
+   },
+   {
+    "w": "magjowa",
+    "s": 74.98,
+    "e": 75.54,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 75.54,
+    "e": 75.74,
+    "gold": false
+   },
+   {
+    "w": "baywalk,",
+    "s": 75.74,
+    "e": 76.64,
+    "gold": false
+   },
+   {
+    "w": "wala",
+    "s": 76.96,
+    "e": 77.08,
+    "gold": false
+   },
+   {
+    "w": "nang",
+    "s": 77.08,
+    "e": 77.36,
+    "gold": false
+   },
+   {
+    "w": "buwang",
+    "s": 77.36,
+    "e": 77.98,
+    "gold": false
+   },
+   {
+    "w": "titingalain.",
+    "s": 77.98,
+    "e": 78.86,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 79.6,
+  "words": [
+   {
+    "w": "At",
+    "s": 79.84,
+    "e": 80.04,
+    "gold": false
+   },
+   {
+    "w": "pagkalipas",
+    "s": 80.04,
+    "e": 80.74,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 80.74,
+    "e": 80.92,
+    "gold": false
+   },
+   {
+    "w": "libu-libong",
+    "s": 80.92,
+    "e": 81.68,
+    "gold": true
+   },
+   {
+    "w": "taon,",
+    "s": 81.68,
+    "e": 82.92,
+    "gold": false
+   },
+   {
+    "w": "puwedeng",
+    "s": 83.32,
+    "e": 83.52,
+    "gold": false
+   },
+   {
+    "w": "gumewang",
+    "s": 83.52,
+    "e": 84.02,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 84.02,
+    "e": 84.3,
+    "gold": false
+   },
+   {
+    "w": "Earth",
+    "s": 84.3,
+    "e": 84.78,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 84.78,
+    "e": 85.06,
+    "gold": false
+   },
+   {
+    "w": "parang",
+    "s": 85.06,
+    "e": 85.36,
+    "gold": false
+   },
+   {
+    "w": "lasing",
+    "s": 85.36,
+    "e": 85.68,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 85.68,
+    "e": 85.9,
+    "gold": false
+   },
+   {
+    "w": "tito",
+    "s": 85.9,
+    "e": 86.1,
+    "gold": true
+   },
+   {
+    "w": "sa",
+    "s": 86.1,
+    "e": 86.3,
+    "gold": false
+   },
+   {
+    "w": "fiesta,",
+    "s": 86.3,
+    "e": 86.8,
+    "gold": false
+   },
+   {
+    "w": "kaya",
+    "s": 87.64,
+    "e": 88.28,
+    "gold": false
+   },
+   {
+    "w": "hindi",
+    "s": 88.28,
+    "e": 88.66,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 88.66,
+    "e": 88.84,
+    "gold": false
+   },
+   {
+    "w": "natin",
+    "s": 88.84,
+    "e": 89.08,
+    "gold": false
+   },
+   {
+    "w": "masasabi",
+    "s": 89.08,
+    "e": 90.14,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 90.14,
+    "e": 90.62,
+    "gold": false
+   },
+   {
+    "w": "kailan",
+    "s": 90.62,
+    "e": 91.0,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 91.0,
+    "e": 91.1,
+    "gold": false
+   },
+   {
+    "w": "tag-init",
+    "s": 91.1,
+    "e": 92.12,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 92.12,
+    "e": 92.58,
+    "gold": false
+   },
+   {
+    "w": "kailan",
+    "s": 92.58,
+    "e": 93.02,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 93.02,
+    "e": 93.1,
+    "gold": false
+   },
+   {
+    "w": "tag-ulan.",
+    "s": 93.1,
+    "e": 93.64,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 94.4,
+  "words": [
+   {
+    "w": "Kaya",
+    "s": 94.55,
+    "e": 94.67,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 94.67,
+    "e": 94.89,
+    "gold": false
+   },
+   {
+    "w": "susunod",
+    "s": 94.89,
+    "e": 95.21,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 95.21,
+    "e": 95.35,
+    "gold": false
+   },
+   {
+    "w": "makita",
+    "s": 95.35,
+    "e": 95.71,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 95.71,
+    "e": 95.85,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 95.85,
+    "e": 95.97,
+    "gold": false
+   },
+   {
+    "w": "buwan,",
+    "s": 95.97,
+    "e": 96.97,
+    "gold": true
+   },
+   {
+    "w": "sulyapan",
+    "s": 97.25,
+    "e": 97.71,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 97.71,
+    "e": 97.91,
+    "gold": false
+   },
+   {
+    "w": "naman",
+    "s": 97.91,
+    "e": 98.17,
+    "gold": false
+   },
+   {
+    "w": "siya",
+    "s": 98.17,
+    "e": 98.53,
+    "gold": false
+   },
+   {
+    "w": "kahit",
+    "s": 98.53,
+    "e": 98.89,
+    "gold": false
+   },
+   {
+    "w": "sandali,",
+    "s": 98.89,
+    "e": 99.73,
+    "gold": false
+   },
+   {
+    "w": "dahil",
+    "s": 100.05,
+    "e": 100.27,
+    "gold": false
+   },
+   {
+    "w": "siya",
+    "s": 100.27,
+    "e": 101.05,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 101.05,
+    "e": 101.45,
+    "gold": false
+   },
+   {
+    "w": "tahimik",
+    "s": 101.45,
+    "e": 102.13,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 102.13,
+    "e": 102.29,
+    "gold": false
+   },
+   {
+    "w": "bantay",
+    "s": 102.29,
+    "e": 103.19,
+    "gold": true
+   },
+   {
+    "w": "ng",
+    "s": 103.19,
+    "e": 103.39,
+    "gold": false
+   },
+   {
+    "w": "ating",
+    "s": 103.39,
+    "e": 103.75,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 103.75,
+    "e": 103.95,
+    "gold": false
+   },
+   {
+    "w": "gabi…",
+    "s": 103.95,
+    "e": 104.27,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 105.11,
+    "e": 105.23,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 105.23,
+    "e": 105.49,
+    "gold": false
+   },
+   {
+    "w": "tanging",
+    "s": 105.49,
+    "e": 105.81,
+    "gold": false
+   },
+   {
+    "w": "dahilan",
+    "s": 105.81,
+    "e": 106.17,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 106.17,
+    "e": 106.41,
+    "gold": false
+   },
+   {
+    "w": "bakit",
+    "s": 106.41,
+    "e": 106.67,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 106.67,
+    "e": 106.91,
+    "gold": false
+   },
+   {
+    "w": "\"full",
+    "s": 106.91,
+    "e": 107.27,
+    "gold": false
+   },
+   {
+    "w": "moon\"",
+    "s": 107.27,
+    "e": 107.49,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 107.49,
+    "e": 107.71,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 107.71,
+    "e": 107.85,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 107.85,
+    "e": 108.03,
+    "gold": false
+   },
+   {
+    "w": "love song",
+    "s": 108.03,
+    "e": 108.49,
+    "gold": true
+   },
+   {
+    "w": "natin.",
+    "s": 108.49,
+    "e": 108.99,
+    "gold": false
+   }
+  ]
+ }
+]
