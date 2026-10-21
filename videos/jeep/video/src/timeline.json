@@ -1,0 +1,1033 @@
+[
+ {
+  "start": 0.6,
+  "words": [
+   {
+    "w": "What",
+    "s": 0.72,
+    "e": 1.28,
+    "gold": false
+   },
+   {
+    "w": "if",
+    "s": 1.28,
+    "e": 1.48,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 1.48,
+    "e": 1.68,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 1.68,
+    "e": 1.82,
+    "gold": false
+   },
+   {
+    "w": "jeepney",
+    "s": 1.82,
+    "e": 2.18,
+    "gold": false
+   },
+   {
+    "w": "driver",
+    "s": 2.18,
+    "e": 2.5,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 2.5,
+    "e": 2.66,
+    "gold": false
+   },
+   {
+    "w": "Pilipinas",
+    "s": 2.66,
+    "e": 3.3,
+    "gold": false
+   },
+   {
+    "w": "ay",
+    "s": 3.3,
+    "e": 3.56,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 3.56,
+    "e": 3.72,
+    "gold": false
+   },
+   {
+    "w": "PhD",
+    "s": 3.72,
+    "e": 4.24,
+    "gold": true
+   },
+   {
+    "w": "sa",
+    "s": 4.24,
+    "e": 4.46,
+    "gold": false
+   },
+   {
+    "w": "Physics?",
+    "s": 4.46,
+    "e": 5.2,
+    "gold": true
+   },
+   {
+    "w": "Kasi",
+    "s": 6.16,
+    "e": 6.3,
+    "gold": false
+   },
+   {
+    "w": "kahit",
+    "s": 6.3,
+    "e": 6.6,
+    "gold": false
+   },
+   {
+    "w": "puno",
+    "s": 6.6,
+    "e": 6.84,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 6.84,
+    "e": 7.02,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 7.02,
+    "e": 7.12,
+    "gold": false
+   },
+   {
+    "w": "jeep,",
+    "s": 7.12,
+    "e": 7.94,
+    "gold": false
+   },
+   {
+    "w": "kaya",
+    "s": 8.3,
+    "e": 8.68,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 8.68,
+    "e": 8.82,
+    "gold": false
+   },
+   {
+    "w": "rin",
+    "s": 8.82,
+    "e": 8.98,
+    "gold": false
+   },
+   {
+    "w": "nilang",
+    "s": 8.98,
+    "e": 9.16,
+    "gold": false
+   },
+   {
+    "w": "maghanap",
+    "s": 9.16,
+    "e": 9.56,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 9.56,
+    "e": 9.72,
+    "gold": false
+   },
+   {
+    "w": "space",
+    "s": 9.72,
+    "e": 10.06,
+    "gold": false
+   },
+   {
+    "w": "para",
+    "s": 10.06,
+    "e": 10.34,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 10.34,
+    "e": 10.58,
+    "gold": false
+   },
+   {
+    "w": "isang",
+    "s": 10.58,
+    "e": 10.78,
+    "gold": false
+   },
+   {
+    "w": "pasahero.",
+    "s": 10.78,
+    "e": 11.8,
+    "gold": false
+   },
+   {
+    "w": "Sasabihin",
+    "s": 12.4,
+    "e": 12.88,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 12.88,
+    "e": 13.06,
+    "gold": false
+   },
+   {
+    "w": "nila,",
+    "s": 13.06,
+    "e": 13.56,
+    "gold": false
+   },
+   {
+    "w": "\"Isa",
+    "s": 13.96,
+    "e": 14.24,
+    "gold": false
+   },
+   {
+    "w": "pa,",
+    "s": 14.24,
+    "e": 14.64,
+    "gold": false
+   },
+   {
+    "w": "kasya",
+    "s": 14.78,
+    "e": 15.06,
+    "gold": true
+   },
+   {
+    "w": "pa!\"",
+    "s": 15.06,
+    "e": 15.86,
+    "gold": true
+   },
+   {
+    "w": "Kahit",
+    "s": 16.68,
+    "e": 16.94,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 16.94,
+    "e": 17.04,
+    "gold": false
+   },
+   {
+    "w": "natitirang",
+    "s": 17.04,
+    "e": 17.58,
+    "gold": false
+   },
+   {
+    "w": "space",
+    "s": 17.58,
+    "e": 17.92,
+    "gold": false
+   },
+   {
+    "w": "ay",
+    "s": 17.92,
+    "e": 18.12,
+    "gold": false
+   },
+   {
+    "w": "para",
+    "s": 18.12,
+    "e": 18.36,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 18.36,
+    "e": 18.52,
+    "gold": false
+   },
+   {
+    "w": "lang",
+    "s": 18.52,
+    "e": 18.58,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 18.58,
+    "e": 18.76,
+    "gold": false
+   },
+   {
+    "w": "isang",
+    "s": 18.76,
+    "e": 18.94,
+    "gold": false
+   },
+   {
+    "w": "daga.",
+    "s": 18.94,
+    "e": 20.02,
+    "gold": true
+   }
+  ]
+ },
+ {
+  "start": 21.1,
+  "words": [
+   {
+    "w": "Tapos",
+    "s": 21.23,
+    "e": 21.59,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 21.59,
+    "e": 21.79,
+    "gold": false
+   },
+   {
+    "w": "sasakay",
+    "s": 21.79,
+    "e": 22.19,
+    "gold": false
+   },
+   {
+    "w": "pang",
+    "s": 22.19,
+    "e": 22.33,
+    "gold": false
+   },
+   {
+    "w": "tatlo.",
+    "s": 22.33,
+    "e": 22.75,
+    "gold": true
+   },
+   {
+    "w": "Ang",
+    "s": 23.57,
+    "e": 23.73,
+    "gold": false
+   },
+   {
+    "w": "tanong:",
+    "s": 23.73,
+    "e": 24.77,
+    "gold": false
+   },
+   {
+    "w": "saan",
+    "s": 25.05,
+    "e": 25.19,
+    "gold": false
+   },
+   {
+    "w": "sila",
+    "s": 25.19,
+    "e": 25.43,
+    "gold": false
+   },
+   {
+    "w": "uupo?",
+    "s": 25.43,
+    "e": 26.07,
+    "gold": true
+   },
+   {
+    "w": "Simple",
+    "s": 26.89,
+    "e": 27.37,
+    "gold": false
+   },
+   {
+    "w": "lang",
+    "s": 27.37,
+    "e": 27.53,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 27.53,
+    "e": 27.59,
+    "gold": false
+   },
+   {
+    "w": "sagot",
+    "s": 27.59,
+    "e": 27.87,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 27.87,
+    "e": 28.01,
+    "gold": false
+   },
+   {
+    "w": "driver:",
+    "s": 28.01,
+    "e": 28.51,
+    "gold": false
+   },
+   {
+    "w": "\"Diskarte",
+    "s": 29.55,
+    "e": 29.99,
+    "gold": true
+   },
+   {
+    "w": "lang,",
+    "s": 29.99,
+    "e": 30.17,
+    "gold": false
+   },
+   {
+    "w": "Boss!\"",
+    "s": 30.41,
+    "e": 30.65,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 31.7,
+  "words": [
+   {
+    "w": "Yung",
+    "s": 31.85,
+    "e": 31.95,
+    "gold": false
+   },
+   {
+    "w": "pasahero",
+    "s": 31.95,
+    "e": 32.39,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 32.39,
+    "e": 32.55,
+    "gold": false
+   },
+   {
+    "w": "likod,",
+    "s": 32.55,
+    "e": 32.93,
+    "gold": false
+   },
+   {
+    "w": "halos",
+    "s": 33.05,
+    "e": 33.27,
+    "gold": false
+   },
+   {
+    "w": "nasa",
+    "s": 33.27,
+    "e": 33.57,
+    "gold": false
+   },
+   {
+    "w": "labas",
+    "s": 33.57,
+    "e": 33.89,
+    "gold": true
+   },
+   {
+    "w": "na,",
+    "s": 33.89,
+    "e": 34.39,
+    "gold": false
+   },
+   {
+    "w": "pero",
+    "s": 34.95,
+    "e": 35.09,
+    "gold": false
+   },
+   {
+    "w": "sasabihin",
+    "s": 35.09,
+    "e": 35.85,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 35.85,
+    "e": 35.99,
+    "gold": false
+   },
+   {
+    "w": "rin",
+    "s": 35.99,
+    "e": 36.05,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 36.05,
+    "e": 36.15,
+    "gold": false
+   },
+   {
+    "w": "driver,",
+    "s": 36.15,
+    "e": 36.55,
+    "gold": false
+   },
+   {
+    "w": "\"Usog",
+    "s": 36.73,
+    "e": 36.97,
+    "gold": true
+   },
+   {
+    "w": "lang",
+    "s": 36.97,
+    "e": 37.13,
+    "gold": false
+   },
+   {
+    "w": "po",
+    "s": 37.13,
+    "e": 37.33,
+    "gold": false
+   },
+   {
+    "w": "nang",
+    "s": 37.33,
+    "e": 37.47,
+    "gold": false
+   },
+   {
+    "w": "konti!\"",
+    "s": 37.47,
+    "e": 39.03,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 49.0,
+  "words": [
+   {
+    "w": "Dito",
+    "s": 49.14,
+    "e": 49.4,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 49.4,
+    "e": 49.56,
+    "gold": false
+   },
+   {
+    "w": "maiisip",
+    "s": 49.56,
+    "e": 50.16,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 50.16,
+    "e": 51.0,
+    "gold": false
+   },
+   {
+    "w": "baka",
+    "s": 51.0,
+    "e": 51.42,
+    "gold": false
+   },
+   {
+    "w": "hindi",
+    "s": 51.42,
+    "e": 51.64,
+    "gold": false
+   },
+   {
+    "w": "ordinaryong",
+    "s": 51.64,
+    "e": 52.26,
+    "gold": true
+   },
+   {
+    "w": "jeep",
+    "s": 52.26,
+    "e": 52.54,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 52.54,
+    "e": 52.76,
+    "gold": false
+   },
+   {
+    "w": "sinasakyan",
+    "s": 52.76,
+    "e": 53.24,
+    "gold": false
+   },
+   {
+    "w": "mo.",
+    "s": 53.24,
+    "e": 53.58,
+    "gold": false
+   },
+   {
+    "w": "Baka",
+    "s": 54.38,
+    "e": 54.54,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 54.54,
+    "e": 54.74,
+    "gold": false
+   },
+   {
+    "w": "technology",
+    "s": 54.74,
+    "e": 55.3,
+    "gold": true
+   },
+   {
+    "w": "ito",
+    "s": 55.3,
+    "e": 55.54,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 55.54,
+    "e": 55.74,
+    "gold": false
+   },
+   {
+    "w": "kayang",
+    "s": 55.74,
+    "e": 55.96,
+    "gold": false
+   },
+   {
+    "w": "baguhin",
+    "s": 55.96,
+    "e": 56.38,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 56.38,
+    "e": 56.54,
+    "gold": false
+   },
+   {
+    "w": "space-time",
+    "s": 56.54,
+    "e": 57.16,
+    "gold": true
+   },
+   {
+    "w": "continuum!",
+    "s": 57.16,
+    "e": 57.86,
+    "gold": true
+   }
+  ]
+ },
+ {
+  "start": 58.8,
+  "words": [
+   {
+    "w": "Si",
+    "s": 58.95,
+    "e": 59.11,
+    "gold": false
+   },
+   {
+    "w": "Einstein",
+    "s": 59.11,
+    "e": 59.57,
+    "gold": true
+   },
+   {
+    "w": "nga,",
+    "s": 59.57,
+    "e": 60.21,
+    "gold": false
+   },
+   {
+    "w": "ilang",
+    "s": 60.37,
+    "e": 60.73,
+    "gold": false
+   },
+   {
+    "w": "taon",
+    "s": 60.73,
+    "e": 60.87,
+    "gold": true
+   },
+   {
+    "w": "nag-aral",
+    "s": 60.87,
+    "e": 61.29,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 61.29,
+    "e": 61.43,
+    "gold": false
+   },
+   {
+    "w": "physics.",
+    "s": 61.43,
+    "e": 61.95,
+    "gold": false
+   },
+   {
+    "w": "Pero",
+    "s": 61.95,
+    "e": 63.07,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 63.07,
+    "e": 63.23,
+    "gold": false
+   },
+   {
+    "w": "jeepney",
+    "s": 63.23,
+    "e": 63.55,
+    "gold": false
+   },
+   {
+    "w": "driver,",
+    "s": 63.55,
+    "e": 64.03,
+    "gold": false
+   },
+   {
+    "w": "isang",
+    "s": 64.61,
+    "e": 64.79,
+    "gold": false
+   },
+   {
+    "w": "tingin",
+    "s": 64.79,
+    "e": 65.09,
+    "gold": true
+   },
+   {
+    "w": "lang,",
+    "s": 65.09,
+    "e": 65.51,
+    "gold": false
+   },
+   {
+    "w": "alam",
+    "s": 65.89,
+    "e": 66.05,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 66.05,
+    "e": 66.21,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 66.21,
+    "e": 66.35,
+    "gold": false
+   },
+   {
+    "w": "ilan",
+    "s": 66.35,
+    "e": 66.61,
+    "gold": false
+   },
+   {
+    "w": "pang",
+    "s": 66.61,
+    "e": 66.69,
+    "gold": false
+   },
+   {
+    "w": "pasahero",
+    "s": 66.69,
+    "e": 67.29,
+    "gold": false
+   },
+   {
+    "w": "kasya!",
+    "s": 67.29,
+    "e": 67.95,
+    "gold": true
+   }
+  ]
+ },
+ {
+  "start": 69.0,
+  "words": [
+   {
+    "w": "Kaya",
+    "s": 69.15,
+    "e": 69.29,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 69.29,
+    "e": 69.45,
+    "gold": false
+   },
+   {
+    "w": "tanong:",
+    "s": 69.45,
+    "e": 70.65,
+    "gold": false
+   },
+   {
+    "w": "kailangan",
+    "s": 70.85,
+    "e": 71.23,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 71.23,
+    "e": 71.37,
+    "gold": false
+   },
+   {
+    "w": "ba",
+    "s": 71.37,
+    "e": 71.49,
+    "gold": false
+   },
+   {
+    "w": "natin",
+    "s": 71.49,
+    "e": 71.71,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 71.71,
+    "e": 71.91,
+    "gold": false
+   },
+   {
+    "w": "NASA",
+    "s": 71.91,
+    "e": 72.63,
+    "gold": true
+   },
+   {
+    "w": "kung",
+    "s": 73.65,
+    "e": 73.75,
+    "gold": false
+   },
+   {
+    "w": "mayroon",
+    "s": 73.75,
+    "e": 74.13,
+    "gold": false
+   },
+   {
+    "w": "naman",
+    "s": 74.13,
+    "e": 74.35,
+    "gold": false
+   },
+   {
+    "w": "tayong",
+    "s": 74.35,
+    "e": 74.55,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 74.55,
+    "e": 74.77,
+    "gold": false
+   },
+   {
+    "w": "jeepney",
+    "s": 74.77,
+    "e": 75.15,
+    "gold": false
+   },
+   {
+    "w": "driver",
+    "s": 75.15,
+    "e": 75.57,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 75.57,
+    "e": 75.79,
+    "gold": false
+   },
+   {
+    "w": "kayang",
+    "s": 75.79,
+    "e": 76.19,
+    "gold": false
+   },
+   {
+    "w": "labagin",
+    "s": 76.19,
+    "e": 76.53,
+    "gold": true
+   },
+   {
+    "w": "ang",
+    "s": 76.53,
+    "e": 76.69,
+    "gold": false
+   },
+   {
+    "w": "batas",
+    "s": 76.69,
+    "e": 77.01,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 77.01,
+    "e": 77.17,
+    "gold": false
+   },
+   {
+    "w": "physics",
+    "s": 77.17,
+    "e": 77.59,
+    "gold": false
+   },
+   {
+    "w": "araw-araw?",
+    "s": 77.59,
+    "e": 78.71,
+    "gold": true
+   }
+  ]
+ },
+ {
+  "start": 79.7,
+  "words": [
+   {
+    "w": "Sa",
+    "s": 79.87,
+    "e": 79.99,
+    "gold": false
+   },
+   {
+    "w": "Pilipinas,",
+    "s": 79.99,
+    "e": 80.75,
+    "gold": false
+   },
+   {
+    "w": "walang",
+    "s": 81.25,
+    "e": 81.39,
+    "gold": false
+   },
+   {
+    "w": "imposible,",
+    "s": 81.39,
+    "e": 82.19,
+    "gold": true
+   },
+   {
+    "w": "basta",
+    "s": 83.13,
+    "e": 83.63,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 83.63,
+    "e": 83.91,
+    "gold": false
+   },
+   {
+    "w": "jeepney",
+    "s": 83.91,
+    "e": 84.23,
+    "gold": false
+   },
+   {
+    "w": "driver",
+    "s": 84.23,
+    "e": 84.61,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 84.61,
+    "e": 84.77,
+    "gold": false
+   },
+   {
+    "w": "nagsasabing,",
+    "s": 84.77,
+    "e": 85.83,
+    "gold": false
+   },
+   {
+    "w": "\"Kasya",
+    "s": 85.91,
+    "e": 86.37,
+    "gold": true
+   },
+   {
+    "w": "pa,",
+    "s": 86.37,
+    "e": 86.59,
+    "gold": false
+   },
+   {
+    "w": "Boss!\"",
+    "s": 86.71,
+    "e": 86.99,
+    "gold": true
+   }
+  ]
+ }
+]
