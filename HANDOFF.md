@@ -2,7 +2,7 @@
 
 **Read this whole file before doing anything.** It is the complete, exact recipe for how every video on this channel is made, and how Claude talks to the user at each step. A new session must reproduce the same style, flow, settings and message formats **exactly**. Don't improvise a new process, don't skip steps, and don't change any approved setting unless the user asks.
 
-Last updated after video #9 (2026-10-21).
+Last updated after video #10 (2026-10-21).
 
 ---
 
@@ -418,6 +418,7 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 7 | Makakaligtas Ka Ba sa Zombie Outbreak? | `videos/zombie` | Makakaligtas ka ba sa zombie outbreak? Mas nakakatakot pala ang ibang outbreak. 🧟‍♂️🧾 | 1080p delivered (thumbnail: user's choice) |
 | 8 | Ano ang Mangyayari Kung Sumabog ang Buwan? | `videos/buwan` | Walang forever… pero sana ang buwan, meron. 🌕🥲 | 1080p delivered, 111 s (science timeline with time chips; thumbnail: user's choice) |
 | 9 | What If May PhD sa Physics ang Jeepney Driver? | `videos/jeep` | Hindi na kailangan ng NASA, may jeepney driver tayo. 🚀🚐 | 1080p rendering, 89 s (user-written script; 80 s recording; thumbnail: user's choice) |
+| 10 | Nalulungkot Ba ang Kanin? | `videos/kanin` | Kahit gaano kasarap ang ulam, kanin pa rin ang tunay na bida. 🍚💛 | 1080p rendering, 95 s (user's own script read word for word: 8 narrated lines, silent scene after line 4; thumbnail: user's choice) |
 
 **Latest project to copy: `videos/tae`** (kit files are identical in `hampaslupa` and `zombie`; `jeep/voice/build_audio.py` has the newest sound helpers: `groan`, `chomp`, `engine`, `squeak`, `cluck`).
 
@@ -448,6 +449,11 @@ Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by
 - Word numbers safely in the narration: "mahigit sampung beses", "halos tatlong-kapat", "wala pang isang porsiyento". Never give exact figures you couldn't verify.
 - If the origin or answer is uncertain, say so in the script (e.g. "wala pa itong opisyal na kahulugan").
 - **Sensitive topics** (sexual slang, real viral people, health risks): explain the concern first, propose a PG angle (hint, don't show), and only write after the user agrees. Example: Esmiringhoy used cats on a roof and a blushing couple, and never the real couple from the viral interview.
+
+### 11.3a When the user sends their own script
+- **Follow it word for word** when they ask ("please follow the script here"). Don't merge, reword or add facts; only send the clean lines (§3.3) with an English note on anything changed (e.g. finishing a line cut off in their message from an earlier copy).
+- If it has 8 lines instead of 7, put the **silent scene after the line that sets up the twist** (in `kanin`, after line 4, the rice's rebellion), giving 9 scenes. Keep the total under 2 min.
+- Example: `videos/kanin` (9 scenes, `S5` silent, `O3` "0 papuri", `O6` red ✕, `O7` "?!"). New props there: `RiceBowl` and `RiceBall` (a rice character with a `Face`: moods happy/sad/angry/calm, tear, wink, glow, bandana, bindle), `AdoboPot`, `Lechon`, `Spaghetti`, `RiceCooker`, `Hearts`, `Room` (dining room with a door that opens to day or night), `Table`, `Family`. Sound helper `creak()` (door).
 
 ### 11.4 Recording problems
 - Small wording changes: keep them and match the subtitles (§3.4).
