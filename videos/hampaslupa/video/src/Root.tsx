@@ -11,7 +11,7 @@ export const Root: React.FC = () => (
 		{[
 			{id: 'ThumbA', scene: 'S1', t: 5.8},
 			{id: 'ThumbB', scene: 'S6', t: 12.7},
-			{id: 'ThumbC', scene: 'S5', t: 8.5},
+			{id: 'ThumbC', scene: 'S4', t: 7.0},
 		].map((c) => (
 			<Composition key={c.id} id={c.id} component={Thumbnail} durationInFrames={1} fps={FPS} width={1080} height={1920} defaultProps={{scene: c.scene, t: c.t, title: 'Isa ka bang', gold: 'hampaslupa?', sub: 'Ano nga ba ang basehan?'}} />
 		))}
