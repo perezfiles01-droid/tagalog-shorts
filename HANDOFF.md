@@ -2,7 +2,7 @@
 
 **Read this whole file before doing anything.** It is the complete, exact recipe for how every video on this channel is made, and how Claude talks to the user at each step. A new session must reproduce the same style, flow, settings and message formats **exactly**. Don't improvise a new process, don't skip steps, and don't change any approved setting unless the user asks.
 
-Last updated after video #5 (2026-10-21).
+Last updated after video #6 (2026-10-21).
 
 ---
 
@@ -75,7 +75,7 @@ Vertical **9:16, 1080×1920, 30fps** animated mini-documentaries, **about 95–1
 | 7 | Picks a caption ("A") | Confirm it in a code block, ready to copy (§3.7). |
 | 8 | Asks "is it done yet?" | Check the log and give an honest status: frames done/total, %, realistic time left (§3.8). |
 | 9 | (render finishes) | Send the **MP4**, then **3 thumbnail options**, then the **upload package** (§3.9). |
-| 10 | Picks a thumbnail | Done. **Update this handoff** (§8), commit and push, and send `HANDOFF.md` as a file if they ask. |
+| 10 | (nothing; they choose and upload the thumbnail themselves) | Done. **Update this handoff** (§10), commit and push, and send `HANDOFF.md` as a file if they ask. **Never ask which thumbnail they picked.** |
 
 **The user uploads manually** to the Facebook Page as a Reel. There's no TikTok and no auto-posting (see §7).
 
@@ -244,7 +244,7 @@ The final 1080p video is ready (attached above: 1080×1920, 30fps, N seconds, M 
 - **Title:** `<title>`
 - **To post:** in the Facebook app, switch to your Kwentong Kayumanggi Page, then tap ＋ Create → Reel, pick the video, tap Edit cover to upload the thumbnail, paste the caption, and tap Share.
 
-Which thumbnail do you want: A, B or C? And what's the next funny question?
+Pick whichever thumbnail you like when you upload. What's the next funny question?
 ```
 
 ---
@@ -413,6 +413,8 @@ Preview (15fps, half size) takes 8–11 min. Final 1080p30 takes about 18–20 m
 | 3 | Esmiringhoy: Saan Nga Ba Nagsimula? | `videos/esmiringhoy` | Esmiringhoy: alam mo na ba kung saan galing? 🐱💕 | 1080p delivered |
 | 4 | Bakit Nga Ba Mabaho ang Utot? | `videos/utot` | Mabaho ba ang utot mo? Hindi ka nag-iisa. 💨😅 | 1080p delivered |
 | 5 | Nakakain Ba ang Tae? Bakit Paborito Ito ng mga Langaw? | `videos/tae` | Nakakain ba ang tae? Ang sagot ng siyensya… at ni Nanay. 😂🪰 | 1080p delivered |
+| 6 | Isa Ka Bang Hampaslupa? | `videos/hampaslupa` | Isa ka bang hampaslupa? Baka mali lang ang basehan natin. 🌾👊 | 1080p delivered (6 narrated lines; thumbnail: user's choice) |
+| 7 | Makakaligtas Ka Ba sa Zombie Outbreak? | `videos/zombie` | (pending) | in progress |
 
 **Latest project to copy: `videos/tae`.**
 
@@ -465,7 +467,7 @@ Then: *"**My pick is #N.** <why>. Which one do you want? I'll write the scene-by
 
 ### 11.7 Naming and replies
 - Folder `videos/<slug>` (short, lowercase, e.g. `tae`, `utot`). Files `<slug>-preview.mp4`, `<slug>-1080p.mp4`, `thumbs/ThumbA.png`. The composition name is PascalCase (`Tae`, `Utot`).
-- When the user picks a thumbnail: *"Thumbnail <X> it is. You have everything to post: the MP4, thumbnail <X>, the caption and the title above."* Then update §10 and push.
+- **Thumbnails: always provide 3 options (A/B/C, one ⭐ recommended), but never ask which one the user picked or wait for it.** They choose while uploading manually (user instruction, 2026-10-21). Update §10 as soon as the MP4 is delivered, with "user's choice" in the thumbnail column.
 - The user writes in English or Taglish. Reply in English. Tagalog content is always shown with an English translation in italics.
 - Keep replies short and scannable (bold labels, short lists), and never claim progress you haven't checked.
 
