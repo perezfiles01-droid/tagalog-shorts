@@ -1,0 +1,1261 @@
+[
+ {
+  "start": 0.6,
+  "words": [
+   {
+    "w": "What",
+    "s": 0.6,
+    "e": 0.76,
+    "gold": false
+   },
+   {
+    "w": "if",
+    "s": 0.76,
+    "e": 0.94,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 0.94,
+    "e": 1.14,
+    "gold": false
+   },
+   {
+    "w": "sixth",
+    "s": 1.14,
+    "e": 1.42,
+    "gold": true
+   },
+   {
+    "w": "sense",
+    "s": 1.42,
+    "e": 1.62,
+    "gold": true
+   },
+   {
+    "w": "talaga",
+    "s": 1.62,
+    "e": 2.0,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 2.0,
+    "e": 2.18,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 2.18,
+    "e": 2.38,
+    "gold": false
+   },
+   {
+    "w": "nanay?",
+    "s": 2.38,
+    "e": 3.8,
+    "gold": false
+   },
+   {
+    "w": "Kahit",
+    "s": 4.36,
+    "e": 4.56,
+    "gold": false
+   },
+   {
+    "w": "nasa",
+    "s": 4.56,
+    "e": 4.9,
+    "gold": false
+   },
+   {
+    "w": "trabaho",
+    "s": 4.9,
+    "e": 5.36,
+    "gold": false
+   },
+   {
+    "w": "sila",
+    "s": 5.36,
+    "e": 5.78,
+    "gold": false
+   },
+   {
+    "w": "o",
+    "s": 5.78,
+    "e": 5.9,
+    "gold": false
+   },
+   {
+    "w": "nasa",
+    "s": 5.9,
+    "e": 6.22,
+    "gold": false
+   },
+   {
+    "w": "palengke,",
+    "s": 6.22,
+    "e": 7.02,
+    "gold": false
+   },
+   {
+    "w": "alam",
+    "s": 7.42,
+    "e": 7.54,
+    "gold": false
+   },
+   {
+    "w": "nila",
+    "s": 7.54,
+    "e": 7.72,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 7.72,
+    "e": 7.94,
+    "gold": false
+   },
+   {
+    "w": "ano",
+    "s": 7.94,
+    "e": 8.06,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 8.06,
+    "e": 8.2,
+    "gold": false
+   },
+   {
+    "w": "ginagawa",
+    "s": 8.2,
+    "e": 8.66,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 8.66,
+    "e": 8.82,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 8.82,
+    "e": 9.0,
+    "gold": false
+   },
+   {
+    "w": "bahay.",
+    "s": 9.0,
+    "e": 9.76,
+    "gold": false
+   },
+   {
+    "w": "Parang",
+    "s": 10.66,
+    "e": 10.8,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 10.8,
+    "e": 11.02,
+    "gold": false
+   },
+   {
+    "w": "CCTV",
+    "s": 11.02,
+    "e": 11.46,
+    "gold": true
+   },
+   {
+    "w": "sa",
+    "s": 11.46,
+    "e": 11.62,
+    "gold": false
+   },
+   {
+    "w": "utak",
+    "s": 11.62,
+    "e": 12.0,
+    "gold": false
+   },
+   {
+    "w": "mo!",
+    "s": 12.0,
+    "e": 12.42,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 13.3,
+  "words": [
+   {
+    "w": "Halimbawa,",
+    "s": 13.3,
+    "e": 13.9,
+    "gold": false
+   },
+   {
+    "w": "nakahiga",
+    "s": 14.34,
+    "e": 14.72,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 14.72,
+    "e": 14.92,
+    "gold": false
+   },
+   {
+    "w": "lang,",
+    "s": 14.92,
+    "e": 15.28,
+    "gold": false
+   },
+   {
+    "w": "nagse-cellphone,",
+    "s": 15.74,
+    "e": 16.76,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 17.44,
+    "e": 17.56,
+    "gold": false
+   },
+   {
+    "w": "walang",
+    "s": 17.56,
+    "e": 17.82,
+    "gold": false
+   },
+   {
+    "w": "balak",
+    "s": 17.82,
+    "e": 18.12,
+    "gold": false
+   },
+   {
+    "w": "gumalaw",
+    "s": 18.12,
+    "e": 18.56,
+    "gold": false
+   },
+   {
+    "w": "buong",
+    "s": 18.56,
+    "e": 18.76,
+    "gold": false
+   },
+   {
+    "w": "araw.",
+    "s": 18.76,
+    "e": 19.64,
+    "gold": false
+   },
+   {
+    "w": "Biglang",
+    "s": 20.4,
+    "e": 20.66,
+    "gold": false
+   },
+   {
+    "w": "magme-message",
+    "s": 20.66,
+    "e": 21.28,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 21.28,
+    "e": 21.42,
+    "gold": false
+   },
+   {
+    "w": "nanay",
+    "s": 21.42,
+    "e": 21.72,
+    "gold": false
+   },
+   {
+    "w": "mo:",
+    "s": 21.72,
+    "e": 22.04,
+    "gold": false
+   },
+   {
+    "w": "\"Wala",
+    "s": 22.8,
+    "e": 23.0,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 23.0,
+    "e": 23.14,
+    "gold": false
+   },
+   {
+    "w": "bang",
+    "s": 23.14,
+    "e": 23.24,
+    "gold": false
+   },
+   {
+    "w": "ginagawa",
+    "s": 23.24,
+    "e": 23.7,
+    "gold": false
+   },
+   {
+    "w": "diyan?\"",
+    "s": 23.7,
+    "e": 23.9,
+    "gold": false
+   },
+   {
+    "w": "Hindi,",
+    "s": 25.12,
+    "e": 25.64,
+    "gold": false
+   },
+   {
+    "w": "parang",
+    "s": 25.8,
+    "e": 25.88,
+    "gold": false
+   },
+   {
+    "w": "nahuli",
+    "s": 25.88,
+    "e": 26.18,
+    "gold": true
+   },
+   {
+    "w": "ka",
+    "s": 26.18,
+    "e": 26.32,
+    "gold": false
+   },
+   {
+    "w": "agad!",
+    "s": 26.32,
+    "e": 26.79,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 27.6,
+  "words": [
+   {
+    "w": "Syempre,",
+    "s": 27.6,
+    "e": 27.96,
+    "gold": false
+   },
+   {
+    "w": "sasagot",
+    "s": 28.04,
+    "e": 28.42,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 28.42,
+    "e": 28.6,
+    "gold": false
+   },
+   {
+    "w": "ng,",
+    "s": 28.6,
+    "e": 29.02,
+    "gold": false
+   },
+   {
+    "w": "\"Nag-aaral",
+    "s": 29.32,
+    "e": 29.82,
+    "gold": false
+   },
+   {
+    "w": "po",
+    "s": 29.82,
+    "e": 29.96,
+    "gold": false
+   },
+   {
+    "w": "ako,",
+    "s": 29.96,
+    "e": 30.14,
+    "gold": false
+   },
+   {
+    "w": "Ma!\"",
+    "s": 30.14,
+    "e": 31.48,
+    "gold": false
+   },
+   {
+    "w": "Kahit",
+    "s": 31.6,
+    "e": 31.72,
+    "gold": false
+   },
+   {
+    "w": "nasa",
+    "s": 31.72,
+    "e": 32.02,
+    "gold": false
+   },
+   {
+    "w": "screen",
+    "s": 32.02,
+    "e": 32.28,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 32.28,
+    "e": 32.44,
+    "gold": false
+   },
+   {
+    "w": "ay",
+    "s": 32.44,
+    "e": 32.56,
+    "gold": false
+   },
+   {
+    "w": "TikTok,",
+    "s": 32.56,
+    "e": 33.1,
+    "gold": true
+   },
+   {
+    "w": "at",
+    "s": 33.82,
+    "e": 33.84,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 33.84,
+    "e": 34.0,
+    "gold": false
+   },
+   {
+    "w": "pinag-aaralan",
+    "s": 34.0,
+    "e": 34.66,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 34.66,
+    "e": 34.98,
+    "gold": false
+   },
+   {
+    "w": "ay",
+    "s": 34.98,
+    "e": 35.22,
+    "gold": false
+   },
+   {
+    "w": "kung",
+    "s": 35.22,
+    "e": 35.34,
+    "gold": false
+   },
+   {
+    "w": "paano",
+    "s": 35.34,
+    "e": 35.68,
+    "gold": false
+   },
+   {
+    "w": "sumayaw",
+    "s": 35.68,
+    "e": 36.1,
+    "gold": true
+   },
+   {
+    "w": "ng",
+    "s": 36.1,
+    "e": 36.3,
+    "gold": false
+   },
+   {
+    "w": "bagong",
+    "s": 36.3,
+    "e": 36.54,
+    "gold": false
+   },
+   {
+    "w": "trend.",
+    "s": 36.54,
+    "e": 36.94,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 46.3,
+  "words": [
+   {
+    "w": "Akala",
+    "s": 46.3,
+    "e": 46.5,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 46.5,
+    "e": 46.62,
+    "gold": false
+   },
+   {
+    "w": "ligtas",
+    "s": 46.62,
+    "e": 47.02,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 47.02,
+    "e": 47.16,
+    "gold": false
+   },
+   {
+    "w": "na,",
+    "s": 47.16,
+    "e": 47.66,
+    "gold": false
+   },
+   {
+    "w": "pero",
+    "s": 48.06,
+    "e": 48.22,
+    "gold": false
+   },
+   {
+    "w": "after",
+    "s": 48.22,
+    "e": 48.52,
+    "gold": false
+   },
+   {
+    "w": "five",
+    "s": 48.52,
+    "e": 48.78,
+    "gold": false
+   },
+   {
+    "w": "seconds,",
+    "s": 48.78,
+    "e": 49.32,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 49.58,
+    "e": 49.7,
+    "gold": false
+   },
+   {
+    "w": "panibagong",
+    "s": 49.7,
+    "e": 50.18,
+    "gold": false
+   },
+   {
+    "w": "message:",
+    "s": 50.18,
+    "e": 50.72,
+    "gold": false
+   },
+   {
+    "w": "\"Eh,",
+    "s": 51.06,
+    "e": 51.2,
+    "gold": false
+   },
+   {
+    "w": "bakit",
+    "s": 51.3,
+    "e": 51.5,
+    "gold": false
+   },
+   {
+    "w": "hindi",
+    "s": 51.5,
+    "e": 51.7,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 51.7,
+    "e": 51.8,
+    "gold": false
+   },
+   {
+    "w": "pa",
+    "s": 51.8,
+    "e": 51.92,
+    "gold": false
+   },
+   {
+    "w": "naghuhugas",
+    "s": 51.92,
+    "e": 52.32,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 52.32,
+    "e": 52.46,
+    "gold": false
+   },
+   {
+    "w": "plato?\"",
+    "s": 52.46,
+    "e": 52.84,
+    "gold": true
+   },
+   {
+    "w": "WAIT",
+    "s": 54.04,
+    "e": 54.28,
+    "gold": false
+   },
+   {
+    "w": "LANG!",
+    "s": 54.28,
+    "e": 54.64,
+    "gold": false
+   },
+   {
+    "w": "Paano",
+    "s": 55.42,
+    "e": 55.64,
+    "gold": false
+   },
+   {
+    "w": "niya",
+    "s": 55.64,
+    "e": 55.78,
+    "gold": false
+   },
+   {
+    "w": "nalaman?",
+    "s": 55.78,
+    "e": 56.22,
+    "gold": false
+   },
+   {
+    "w": "Nasa",
+    "s": 56.22,
+    "e": 57.2,
+    "gold": false
+   },
+   {
+    "w": "kabilang",
+    "s": 57.2,
+    "e": 57.58,
+    "gold": false
+   },
+   {
+    "w": "siyudad",
+    "s": 57.52,
+    "e": 57.88,
+    "gold": true
+   },
+   {
+    "w": "siya!",
+    "s": 57.9,
+    "e": 58.2,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 59.1,
+  "words": [
+   {
+    "w": "Dahil",
+    "s": 59.1,
+    "e": 59.74,
+    "gold": false
+   },
+   {
+    "w": "sa",
+    "s": 59.74,
+    "e": 59.9,
+    "gold": false
+   },
+   {
+    "w": "takot,",
+    "s": 59.9,
+    "e": 60.6,
+    "gold": true
+   },
+   {
+    "w": "tatayo",
+    "s": 60.86,
+    "e": 61.16,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 61.16,
+    "e": 61.36,
+    "gold": false
+   },
+   {
+    "w": "agad",
+    "s": 61.36,
+    "e": 61.64,
+    "gold": false
+   },
+   {
+    "w": "at",
+    "s": 61.64,
+    "e": 61.84,
+    "gold": false
+   },
+   {
+    "w": "maghuhugas",
+    "s": 61.84,
+    "e": 62.3,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 62.3,
+    "e": 62.46,
+    "gold": false
+   },
+   {
+    "w": "plato.",
+    "s": 62.46,
+    "e": 62.88,
+    "gold": false
+   },
+   {
+    "w": "Pati",
+    "s": 63.78,
+    "e": 63.94,
+    "gold": false
+   },
+   {
+    "w": "kaldero,",
+    "s": 63.94,
+    "e": 65.1,
+    "gold": true
+   },
+   {
+    "w": "kawali,",
+    "s": 65.3,
+    "e": 66.02,
+    "gold": true
+   },
+   {
+    "w": "at",
+    "s": 66.48,
+    "e": 66.56,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 66.56,
+    "e": 66.72,
+    "gold": false
+   },
+   {
+    "w": "kutsara,",
+    "s": 66.72,
+    "e": 67.04,
+    "gold": false
+   },
+   {
+    "w": "lilinisin",
+    "s": 67.94,
+    "e": 68.44,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 68.44,
+    "e": 68.56,
+    "gold": false
+   },
+   {
+    "w": "na.",
+    "s": 68.56,
+    "e": 68.96,
+    "gold": false
+   },
+   {
+    "w": "Baka",
+    "s": 69.4,
+    "e": 69.56,
+    "gold": false
+   },
+   {
+    "w": "kasi",
+    "s": 69.56,
+    "e": 69.74,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 69.74,
+    "e": 69.96,
+    "gold": false
+   },
+   {
+    "w": "susunod",
+    "s": 69.96,
+    "e": 70.32,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 70.32,
+    "e": 70.4,
+    "gold": false
+   },
+   {
+    "w": "message",
+    "s": 70.4,
+    "e": 70.72,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 70.72,
+    "e": 70.86,
+    "gold": false
+   },
+   {
+    "w": "naman!",
+    "s": 70.86,
+    "e": 71.36,
+    "gold": false
+   }
+  ]
+ },
+ {
+  "start": 72.1,
+  "words": [
+   {
+    "w": "Pagkatapos",
+    "s": 72.1,
+    "e": 72.5,
+    "gold": false
+   },
+   {
+    "w": "mong",
+    "s": 72.5,
+    "e": 72.66,
+    "gold": false
+   },
+   {
+    "w": "maglinis,",
+    "s": 72.66,
+    "e": 73.72,
+    "gold": false
+   },
+   {
+    "w": "hihiga ka",
+    "s": 74.14,
+    "e": 74.46,
+    "gold": false
+   },
+   {
+    "w": "ulit",
+    "s": 74.46,
+    "e": 74.76,
+    "gold": false
+   },
+   {
+    "w": "para",
+    "s": 74.76,
+    "e": 74.92,
+    "gold": false
+   },
+   {
+    "w": "magpahinga.",
+    "s": 74.92,
+    "e": 75.46,
+    "gold": false
+   },
+   {
+    "w": "Pero",
+    "s": 76.54,
+    "e": 76.74,
+    "gold": false
+   },
+   {
+    "w": "biglang",
+    "s": 76.74,
+    "e": 77.1,
+    "gold": false
+   },
+   {
+    "w": "tatawag",
+    "s": 77.1,
+    "e": 77.56,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 77.56,
+    "e": 77.68,
+    "gold": false
+   },
+   {
+    "w": "nanay",
+    "s": 77.68,
+    "e": 77.98,
+    "gold": false
+   },
+   {
+    "w": "mo:",
+    "s": 77.98,
+    "e": 78.24,
+    "gold": false
+   },
+   {
+    "w": "\"Tapos",
+    "s": 79.04,
+    "e": 79.26,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 79.26,
+    "e": 79.36,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 79.36,
+    "e": 79.48,
+    "gold": false
+   },
+   {
+    "w": "ba?",
+    "s": 79.48,
+    "e": 79.74,
+    "gold": false
+   },
+   {
+    "w": "Pati",
+    "s": 80.52,
+    "e": 80.78,
+    "gold": false
+   },
+   {
+    "w": "sahig,",
+    "s": 80.78,
+    "e": 81.24,
+    "gold": false
+   },
+   {
+    "w": "walisan",
+    "s": 81.4,
+    "e": 81.7,
+    "gold": false
+   },
+   {
+    "w": "mo!\"",
+    "s": 81.7,
+    "e": 82.02,
+    "gold": false
+   },
+   {
+    "w": "Dito",
+    "s": 82.78,
+    "e": 83.28,
+    "gold": false
+   },
+   {
+    "w": "mo",
+    "s": 83.28,
+    "e": 83.42,
+    "gold": false
+   },
+   {
+    "w": "mararamdaman",
+    "s": 83.42,
+    "e": 84.18,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 84.18,
+    "e": 84.42,
+    "gold": false
+   },
+   {
+    "w": "hindi",
+    "s": 84.42,
+    "e": 84.6,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 84.6,
+    "e": 84.76,
+    "gold": false
+   },
+   {
+    "w": "anak…",
+    "s": 84.76,
+    "e": 85.06,
+    "gold": false
+   },
+   {
+    "w": "empleyado",
+    "s": 86.02,
+    "e": 86.52,
+    "gold": true
+   },
+   {
+    "w": "ka",
+    "s": 86.52,
+    "e": 86.68,
+    "gold": false
+   },
+   {
+    "w": "pala",
+    "s": 86.68,
+    "e": 86.96,
+    "gold": false
+   },
+   {
+    "w": "na",
+    "s": 86.96,
+    "e": 87.12,
+    "gold": false
+   },
+   {
+    "w": "walang",
+    "s": 87.12,
+    "e": 87.42,
+    "gold": false
+   },
+   {
+    "w": "sweldo!",
+    "s": 87.42,
+    "e": 87.9,
+    "gold": true
+   }
+  ]
+ },
+ {
+  "start": 88.7,
+  "words": [
+   {
+    "w": "Kaya",
+    "s": 88.7,
+    "e": 88.88,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 88.88,
+    "e": 89.06,
+    "gold": false
+   },
+   {
+    "w": "tanong:",
+    "s": 89.06,
+    "e": 89.86,
+    "gold": false
+   },
+   {
+    "w": "May",
+    "s": 90.52,
+    "e": 90.74,
+    "gold": false
+   },
+   {
+    "w": "sixth",
+    "s": 90.74,
+    "e": 90.98,
+    "gold": false
+   },
+   {
+    "w": "sense",
+    "s": 90.98,
+    "e": 91.2,
+    "gold": false
+   },
+   {
+    "w": "ba",
+    "s": 91.2,
+    "e": 91.4,
+    "gold": false
+   },
+   {
+    "w": "talaga",
+    "s": 91.4,
+    "e": 91.66,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 91.66,
+    "e": 91.9,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 91.9,
+    "e": 92.02,
+    "gold": false
+   },
+   {
+    "w": "nanay,",
+    "s": 92.02,
+    "e": 92.72,
+    "gold": false
+   },
+   {
+    "w": "o",
+    "s": 93.46,
+    "e": 93.58,
+    "gold": false
+   },
+   {
+    "w": "may",
+    "s": 93.58,
+    "e": 93.74,
+    "gold": false
+   },
+   {
+    "w": "secret",
+    "s": 93.74,
+    "e": 94.14,
+    "gold": false
+   },
+   {
+    "w": "group",
+    "s": 94.14,
+    "e": 94.4,
+    "gold": true
+   },
+   {
+    "w": "chat",
+    "s": 94.4,
+    "e": 94.58,
+    "gold": true
+   },
+   {
+    "w": "sila",
+    "s": 94.58,
+    "e": 94.88,
+    "gold": false
+   },
+   {
+    "w": "kasama",
+    "s": 94.88,
+    "e": 95.24,
+    "gold": false
+   },
+   {
+    "w": "ang",
+    "s": 95.24,
+    "e": 95.38,
+    "gold": false
+   },
+   {
+    "w": "mga",
+    "s": 95.38,
+    "e": 95.56,
+    "gold": false
+   },
+   {
+    "w": "kapitbahay?",
+    "s": 95.56,
+    "e": 96.64,
+    "gold": false
+   },
+   {
+    "w": "Kasi",
+    "s": 97.4,
+    "e": 97.56,
+    "gold": false
+   },
+   {
+    "w": "kahit",
+    "s": 97.56,
+    "e": 97.86,
+    "gold": false
+   },
+   {
+    "w": "hindi",
+    "s": 97.86,
+    "e": 98.04,
+    "gold": false
+   },
+   {
+    "w": "ka",
+    "s": 98.04,
+    "e": 98.16,
+    "gold": false
+   },
+   {
+    "w": "nakikita,",
+    "s": 98.16,
+    "e": 98.92,
+    "gold": false
+   },
+   {
+    "w": "alam",
+    "s": 99.66,
+    "e": 99.84,
+    "gold": false
+   },
+   {
+    "w": "nila",
+    "s": 99.84,
+    "e": 100.04,
+    "gold": false
+   },
+   {
+    "w": "lahat",
+    "s": 100.04,
+    "e": 100.32,
+    "gold": false
+   },
+   {
+    "w": "ng",
+    "s": 100.32,
+    "e": 100.44,
+    "gold": false
+   },
+   {
+    "w": "kalokohan",
+    "s": 100.44,
+    "e": 100.96,
+    "gold": true
+   },
+   {
+    "w": "mo!",
+    "s": 100.96,
+    "e": 101.1,
+    "gold": false
+   }
+  ]
+ }
+]
